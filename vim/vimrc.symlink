@@ -1,6 +1,9 @@
+" load plugins from vundle
+source $DOTFILES/vim/vim.symlink/plugins.vim
+
 let mapleader=","
 color smyck
-execute pathogen#infect()
+" execute pathogen#infect()
 syntax on
 filetype plugin on
 

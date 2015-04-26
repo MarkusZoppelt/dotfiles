@@ -20,3 +20,6 @@ Credit to [nicknisi](https://github.com/nicknisi) (I'm using his setup and modif
 ## ZSH Plugins
 
 By default, the `.zshrc` file will source any file within `.dotfiles/zsh` that have the `.zsh` extension.
+
+## VIM Plugins
+To enable VIM plugins run :PluginInstall

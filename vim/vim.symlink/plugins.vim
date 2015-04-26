@@ -6,7 +6,6 @@ call vundle#begin()
 " let vundle manage vundle
 Plugin 'gmarik/vundle'
 
-Plugin 'the-lambda-church/coquille'
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tomtom/tcomment_vim'
@@ -18,7 +17,8 @@ Plugin 'Shougo/vimshell.vim'
 Plugin 'lervag/vimtex'
 Plugin 'benmills/vimux'
 Plugin 'sukima/xmledit'
-
+Plugin 'def-lkb/vimbufsync'
+Plugin 'the-lambda-church/coquille'
 
 
 

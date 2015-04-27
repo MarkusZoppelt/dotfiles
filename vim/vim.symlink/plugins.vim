@@ -23,6 +23,7 @@ Plugin 'ervandew/supertab'
 " Plugin 'msanders/snipmate.vim'
 " Plugin 'Lokaltog/vim-powerline'
 Plugin 'scrooloose/syntastic'
+" Plugin 'Valloric/YouCompleteMe'
 
 
 call vundle#end()

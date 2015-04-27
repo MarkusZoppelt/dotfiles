@@ -1,11 +1,12 @@
 # git aliases
-alias ga='git add'
+alias ga='git add .'
+alias gc='git commit'
 alias gb='git branch'
 alias gl='git pull'
 alias gp='git push'
 alias gd='git diff'
 alias gdc='git diff --cached'
-alias gs='git s'
+alias gst='git status'
 alias gss='git stash save'
 alias gsp='git stash pop'
 alias gmv='git mv'
@@ -39,6 +40,6 @@ function g() {
         git $@
     else
         # otherwise, run git status
-        git s
+        git status
     fi
 }

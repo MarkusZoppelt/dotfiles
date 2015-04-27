@@ -3,7 +3,7 @@
 echo "installing dotfiles"
 
 echo "initializing submodule(s)"
-git submodule update --init --recursive
+# git submodule update --init --recursive
 
 source install/link.sh
 
@@ -25,8 +25,9 @@ if [ "$(uname)" == "Darwin" ]; then
     # nvm alias default stable
 fi
 
-# echo "Vundle extra..."
-# git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
+echo "Vundle extra..."
+mkdir ~/.vim/bundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
 
 echo "configuring zsh as default shell"
 chsh -s $(which zsh)

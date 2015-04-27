@@ -1,3 +1,5 @@
+alias ll="ls -l"
+alias uberspace="ssh mzoppelt@sagitta.uberspace.de"
 alias vpn="osascript ~/Scripts/VPN-Campus.scpt"
 alias novpn="osascript ~/Scripts/NO-VPN-Campus.scpt"
 _master()

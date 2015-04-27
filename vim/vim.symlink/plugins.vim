@@ -19,7 +19,10 @@ Plugin 'benmills/vimux'
 Plugin 'sukima/xmledit'
 Plugin 'def-lkb/vimbufsync'
 Plugin 'the-lambda-church/coquille'
-
+Plugin 'ervandew/supertab'
+" Plugin 'msanders/snipmate.vim'
+" Plugin 'Lokaltog/vim-powerline'
+Plugin 'scrooloose/syntastic'
 
 
 call vundle#end()

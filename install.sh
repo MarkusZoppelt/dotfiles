@@ -26,6 +26,8 @@ if [ "$(uname)" == "Darwin" ]; then
     nvm alias default stable
 fi
 
+echo "Vundle extra..."
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
 
 echo "configuring zsh as default shell"
 chsh -s $(which zsh)

@@ -18,12 +18,12 @@ if [ "$(uname)" == "Darwin" ]; then
     echo "brewing all the things"
     source install/brew.sh
 
-    # echo "updating OSX settings"
-    # source scripts/osx.sh
+    echo "updating OSX settings"
+    source scripts/osx.sh
 
-    echo "installing node (from nvm)"
-    nvm install stable
-    nvm alias default stable
+    # echo "installing node (from nvm)"
+    # nvm install stable
+    # nvm alias default stable
 fi
 
 echo "Vundle extra..."

@@ -4,6 +4,8 @@ source ~/.vim/plugins.vim
 set autoread
 let mapleader=","
 color smyck
+nmap <leader>p :color github<cr>:hi CheckedByCoq ctermbg=LightGreen<cr>:hi SentToCoq ctermbg=LightGreen<cr>
+
 syntax on
 filetype plugin on
 
@@ -58,15 +60,15 @@ let CoqIDE_coqtop = "/usr/local/bin/coqtop"
 " let g:CoqIDEDefaultMap = 1
 
 " Maps Coquille commands to <F2> (Undo), <F3> (Next), <F4> (ToCursor)
+let g:coquille_auto_move = 'true'
 au FileType coq call coquille#FNMapping()
 map <F8> :CoqLaunch<CR>
 map <F9> :CoqKill<CR>
 
-
 " Development
 autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
-nmap <leader>z :call VimuxRunCommand("pdflatex *.tex && open *.pdf")<cr>
+nmap <leader>z :call VimuxRunCommand("pdflatex document.tex && echo Erfolg")<cr>
 nmap <leader>l :call VimuxRunCommand("open -a Safari index.html")<cr>
 
 " Auto close tags
@@ -77,7 +79,10 @@ set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set laststatus=2
 
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
+" let g:syntastic_always_populate_loc_list = 1
+" let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 0
+let g:syntastic_check_on_wq = 1
+
+" hi CheckedByCoq ctermbg=LightGreen guibg=LightGreen
+" hi SentToCoq ctermbg=LightGreen guibg=LimeGreen

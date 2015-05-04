@@ -25,6 +25,7 @@ Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 " Plugin 'Valloric/YouCompleteMe'
 Plugin 'bling/vim-airline'
+Plugin 'mileszs/ack.vim'
 
 call vundle#end()
 filetype plugin indent on

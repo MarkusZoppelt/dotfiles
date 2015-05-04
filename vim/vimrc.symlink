@@ -75,6 +75,7 @@ autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%').' -o '.s
 autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 nmap <leader>z :call VimuxRunCommand("pdflatex document.tex && echo Erfolg")<cr>
 nmap <leader>l :call VimuxRunCommand("open -a Safari index.html")<cr>
+nmap <leader>i :call VimuxRunCommand("makeindex -s document.ist -o document.gls document.glo")<cr>
 
 " Auto close tags
 :iabbrev </ </<C-X><C-O>

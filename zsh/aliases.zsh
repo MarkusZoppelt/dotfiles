@@ -12,6 +12,35 @@ alias blogupdate="cd ~/blog ; jekyll build && scp -r _site/* mzoppelt@sagitta.ub
 alias bloglocal="cd ~/blog && jekyll serve --config _config_dev.yml -w"
 alias pi="ssh pi@192.168.2.116"
 
+_macadmin()
+{
+tmux new-session -d -s admin
+tmux send-keys 'ssh markuszoppelt@mac9lab.informatik.fh-nuernberg.de' 'C-m'
+tmux splitw
+tmux send-keys 'ssh markuszoppelt@mac1lab.informatik.fh-nuernberg.de' 'C-m'
+tmux splitw
+tmux send-keys 'ssh markuszoppelt@mac2lab.informatik.fh-nuernberg.de' 'C-m'
+tmux splitw
+tmux send-keys 'ssh markuszoppelt@mac3lab.informatik.fh-nuernberg.de' 'C-m'
+tmux select-layout tiled
+tmux splitw
+tmux send-keys 'ssh markuszoppelt@mac4lab.informatik.fh-nuernberg.de' 'C-m'
+tmux splitw
+tmux send-keys 'ssh markuszoppelt@mac5lab.informatik.fh-nuernberg.de' 'C-m'
+tmux select-layout tiled
+tmux splitw
+tmux send-keys 'ssh markuszoppelt@mac6lab.informatik.fh-nuernberg.de' 'C-m'
+tmux select-layout tiled
+tmux splitw
+tmux send-keys 'ssh markuszoppelt@mac7lab.informatik.fh-nuernberg.de' 'C-m'
+tmux select-layout tiled
+tmux splitw
+tmux send-keys 'ssh markuszoppelt@mac8lab.informatik.fh-nuernberg.de' 'C-m'
+tmux select-layout tiled
+tmux -2 attach-session -t admin	
+}
+alias macadmin=_macadmin
+
 # tmux resizing
 alias tdown="tmux resize-pane -D $1"
 alias tright="tmux resize-pane -R $1"

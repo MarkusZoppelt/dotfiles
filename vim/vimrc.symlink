@@ -5,7 +5,7 @@ set autoread
 inoremap kj <ESC>
 let mapleader=","
 color smyck
-nmap <leader>p :color github<cr>:hi CheckedByCoq ctermbg=LightGreen<cr>:hi SentToCoq ctermbg=LightGreen<cr>
+nmap <leader>p :source ~/.presrc<CR>
 
 syntax on
 filetype plugin on
@@ -18,7 +18,7 @@ set backspace=indent,eol,start
 highlight LineNr ctermfg=lightgrey ctermbg=darkgray
 
 autocmd StdinReadPre * let s:std_in=1
-autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
+" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " faster redrawing
 set ttyfast
@@ -31,7 +31,7 @@ set foldlevel=1
 
 " line wrapping
 set wrap
-set wrapmargin=8
+" set wrapmargin=8
 set linebreak
 set showbreak=…
 

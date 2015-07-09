@@ -46,3 +46,4 @@ alias tdown="tmux resize-pane -D $1"
 alias tright="tmux resize-pane -R $1"
 alias tleft="tmux resize-pane -L $1"
 alias tup="tmux resize-pane -U $1"
+alias fuck='eval $(thefuck $(fc -ln -1 | tail -n 1)); fc -R'

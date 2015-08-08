@@ -10,7 +10,7 @@ _master()
 alias master=_master
 alias blogupdate="cd ~/blog ; jekyll build && scp -r _site/* mzoppelt@sagitta.uberspace.de:html/ "
 alias bloglocal="cd ~/blog && jekyll serve --config _config_dev.yml -w"
-alias pi="ssh pi@192.168.2.116"
+alias pi="ssh pi@raspberrypi.local"
 
 _macadmin()
 {

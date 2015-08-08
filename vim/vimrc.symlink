@@ -77,6 +77,7 @@ nmap <leader>z :call VimuxRunCommand("pdflatex paper.tex && echo Erfolg")<cr>
 nmap <leader>x :call VimuxRunCommand("xelatex essay.tex && open essay.pdf")<cr>
 nmap <leader>l :call VimuxRunCommand("open -a Safari index.html")<cr>
 nmap <leader>i :call VimuxRunCommand("makeindex -s document.ist -o document.gls document.glo")<cr>
+nmap <leader>m :call VimuxRunCommand("make")<cr>
 
 " Auto close tags
 :iabbrev </ </<C-X><C-O>

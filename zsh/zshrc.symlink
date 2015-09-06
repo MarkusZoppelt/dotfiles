@@ -73,6 +73,11 @@ if [[ -d /usr/local/opt/glassfish/libexec/bin ]]; then
 fi
 # export MANPATH="/usr/local/man:$MANPATH"
 
+autoload edit-command-line
+autoload -U compinit
+autoload -U zmv
+autoload zcalc
+
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
 # History magic
@@ -85,3 +90,7 @@ bindkey "$terminfo[kcud1]" history-substring-search-down
 # for Ubuntu 12.04, Fedora 21, and MacOSX 10.9 users)
 bindkey '^[[A' history-substring-search-up
 bindkey '^[[B' history-substring-search-down
+
+setopt correct
+setopt auto_cd
+CDPATH=$CDPATH::$HOME:/$HOME/Studium/

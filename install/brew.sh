@@ -13,6 +13,7 @@ brew install irssi
 brew install markdown
 brew install maven
 brew install nvm
+brew install npm
 # brew install noweb
 # brew install openssl
 brew install peco

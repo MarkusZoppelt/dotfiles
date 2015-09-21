@@ -9,3 +9,5 @@
 [core]
 	excludesfile = /Users/markuszoppelt/.gitignore_global
 	editor = vim
+[push]
+	default = simple

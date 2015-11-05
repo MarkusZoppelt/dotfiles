@@ -4,7 +4,7 @@
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 
 # echo "show hidden files by default"
-defaults write com.apple.Finder AppleShowAllFiles -bool false
+defaults write com.apple.Finder AppleShowAllFiles -bool true
 
 # echo "only use UTF-8 in Terminal.app"
 defaults write com.apple.terminal StringEncodings -array 4
@@ -135,6 +135,9 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 #echo "Require password immediately after sleep or screen saver begins"
 #defaults write com.apple.screensaver askForPassword -int 1
 #defaults write com.apple.screensaver askForPasswordDelay -int 0
+
+echo "Fast trackpad speed"
+defaults write -g com.apple.trackpad.scaling 5
 
 echo "Enable tap to click (Trackpad)"
 defaults write com.apple.driver.AppleBluetoothMultitouch.trackpad Clicking -bool true

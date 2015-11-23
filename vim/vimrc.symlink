@@ -10,6 +10,9 @@ nmap <leader>p :source ~/.presrc<CR>
 syntax on
 filetype plugin on
 
+" fix cron fuckup
+au FileType crontab setlocal bkc=yes
+
 set ruler
 set ai
 set vb t_vb=""

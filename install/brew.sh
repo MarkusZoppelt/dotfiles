@@ -31,4 +31,4 @@ brew tap beeftornado/rmtree && brew install beeftornado/rmtree/brew-rmtree
 # brew cask
 brew install caskroom/cask/brew-cask
 brew cask install macvim
-brew cask install libreoffice
+# brew cask install libreoffice

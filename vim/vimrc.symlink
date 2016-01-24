@@ -5,7 +5,7 @@ set autoread
 inoremap kj <ESC>
 let mapleader=","
 color smyck
-nmap <leader>p :source ~/.presrc<CR>
+nmap <leader>p :color visualstudio<CR>
 
 syntax on
 filetype plugin on

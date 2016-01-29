@@ -11,7 +11,8 @@ alias master=_master
 alias blogupdate="cd ~/blog ; jekyll build && scp -r _site/* mzoppelt@zoppelt.net:html/ "
 alias blogupdate-lite="cd ~/blog ; jekyll build && scp -r _site/*[^assets/] mzoppelt@zoppelt.net:html/ "
 alias bloglocal="cd ~/blog && jekyll serve --config _config_dev.yml -w"
-alias pi="ssh pi@raspberrypi2"
+alias pi="ssh pi@pi.zoppelt.net"
+alias pizero="ssh pi@pizero.zoppelt.net"
 
 _macadmin()
 {

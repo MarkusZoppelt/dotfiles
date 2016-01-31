@@ -3,19 +3,14 @@
 
 brew install aria2
 brew install cmake
-# brew install coq
 brew install ffmpeg
 brew install git
-brew install glassfish
 brew install imagemagick
 brew install macvim --override-system-vim
 brew install irssi
 brew install markdown
-brew install maven
 brew install nvm
 brew install npm
-# brew install noweb
-# brew install openssl
 brew install peco
 # brew install qt
 brew install reattach-to-user-namespace

@@ -21,7 +21,6 @@ set backspace=indent,eol,start
 highlight LineNr ctermfg=lightgrey ctermbg=darkgray
 
 autocmd StdinReadPre * let s:std_in=1
-" autocmd VimEnter * if argc() == 0 && !exists("s:std_in") | NERDTree | endif
 
 " faster redrawing
 set ttyfast
@@ -44,7 +43,14 @@ nmap <leader>, :w<cr>
 
 map <leader>t :tabnew<CR>
 
-map <C-n> :NERDTreeToggle<CR>
+" netrw options
+let g:netrw_banner       = 0
+let g:netrw_keepdir      = 0
+let g:netrw_liststyle    = 1 " or 3
+let g:netrw_sort_options = 'i'
+autocmd VimEnter * if isdirectory(expand('<afile>')) | Explore | endif
+map <C-n> :Explore<CR>
+
 command WQ wq
 command Wq wq
 command W w
@@ -64,21 +70,10 @@ highlight SpecialKey guifg=#4a4a59
 set guioptions-=L
 set guioptions-=r
 
-let CoqIDE_coqtop = "/usr/local/bin/coqtop"
-" let g:CoqIDEDefaultMap = 1
-
-" Maps Coquille commands to <F2> (Undo), <F3> (Next), <F4> (ToCursor)
-let g:coquille_auto_move = 'true'
-au FileType coq call coquille#FNMapping()
-map <F8> :CoqLaunch<CR>
-map <F9> :CoqKill<CR>
-
 " Development
 autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
 autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
-nmap <leader>z :call VimuxRunCommand("pdflatex paper.tex && echo Erfolg")<cr>
-nmap <leader>x :call VimuxRunCommand("xelatex essay.tex && open essay.pdf")<cr>
-nmap <leader>l :call VimuxRunCommand("open -a Safari index.html")<cr>
+nmap <leader>z :call VimuxRunCommand("pdflatex main.tex && echo Erfolg")<cr>
 nmap <leader>i :call VimuxRunCommand("makeindex -s document.ist -o document.gls document.glo")<cr>
 nmap <leader>m :call VimuxRunCommand("make")<cr>
 

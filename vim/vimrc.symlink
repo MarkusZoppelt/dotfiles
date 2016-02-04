@@ -17,6 +17,7 @@ set ruler
 set ai
 set vb t_vb=""
 set nu
+set relativenumber
 set backspace=indent,eol,start
 highlight LineNr ctermfg=lightgrey ctermbg=darkgray
 

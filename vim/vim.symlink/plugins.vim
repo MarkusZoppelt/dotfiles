@@ -15,6 +15,7 @@ Plugin 'def-lkb/vimbufsync'
 Plugin 'ervandew/supertab'
 Plugin 'scrooloose/syntastic'
 Plugin 'bling/vim-airline'
+Plugin 'edkolev/tmuxline.vim'
 Plugin 'vim-scripts/Greplace.vim'
 
 call vundle#end()

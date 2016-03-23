@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 echo "installing dotfiles"
 
@@ -10,7 +10,6 @@ source install/link.sh
 if [ "$(uname)" == "Darwin" ]; then
     echo "running on OSX"
 	
-	
     echo "installing homebrew"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
@@ -19,10 +18,6 @@ if [ "$(uname)" == "Darwin" ]; then
 
     echo "updating OSX settings"
     source install/osx.sh
-
-    # echo "installing node (from nvm)"
-    # nvm install stable
-    # nvm alias default stable
 fi
 
 echo "Vundle extra..."

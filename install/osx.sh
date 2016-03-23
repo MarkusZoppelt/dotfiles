@@ -115,7 +115,7 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # defaults write NSGlobalDomain NSWindowResizeTime -float 0.001
 
 # echo "Avoid creating .DS_Store files on network volumes"
-# defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
+defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
 
 # echo "Disable the warning when changing a file extension"
 # defaults write com.apple.finder FXEnableExtensionChangeWarning -bool false
@@ -127,10 +127,10 @@ defaults write NSGlobalDomain InitialKeyRepeat -int 15
 # /usr/libexec/PlistBuddy -c "Set :DesktopViewSettings:IconViewSettings:arrangeBy grid" ~/Library/Preferences/com.apple.finder.plist
 
 # echo "Disable the warning before emptying the Trash"
-# defaults write com.apple.finder WarnOnEmptyTrash -bool false
+defaults write com.apple.finder WarnOnEmptyTrash -bool false
 
 # Empty Trash securely by default
-# defaults write com.apple.finder EmptyTrashSecurely -bool true
+defaults write com.apple.finder EmptyTrashSecurely -bool true
 
 #echo "Require password immediately after sleep or screen saver begins"
 #defaults write com.apple.screensaver askForPassword -int 1

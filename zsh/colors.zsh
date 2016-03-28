@@ -16,3 +16,15 @@ COLOR_LIGHTPURPLE="\e[1;35m"
 COLOR_YELLOW="\e[1;33m"
 COLOR_WHITE="\e[1;37m"
 COLOR_NONE="\e[0m"
+
+# print available colors and their numbers
+function colours() {
+    for i in {0..255}; do
+        printf "\x1b[38;5;${i}m colour${i}"
+        if (( $i % 5 == 0 )); then
+            printf "\n"
+        else
+            printf "\t"
+        fi
+    done
+}

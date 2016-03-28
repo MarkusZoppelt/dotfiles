@@ -18,8 +18,6 @@ fi
 autoload -U compinit
 compinit
 
-for config ($ZSH/**/*completion.sh) source $config
-
 export EDITOR='vim'
 
 export PATH=/usr/local/bin:$PATH
@@ -68,10 +66,8 @@ fi
 if [[ -d /usr/local/MacGPG2/bin ]]; then
 	export PATH=/usr/local/MacGPG2/bin:$PATH
 fi
-if [[ -d /usr/local/opt/glassfish/libexec/bin ]]; then
-	export PATH=/usr/local/opt/glassfish/libexec/bin:$PATH
-fi
-# export MANPATH="/usr/local/man:$MANPATH"
+
+export MANPATH="/usr/local/man:$MANPATH"
 
 autoload edit-command-line
 autoload -U compinit
@@ -93,4 +89,6 @@ bindkey '^[[B' history-substring-search-down
 
 setopt correct
 setopt auto_cd
+
 CDPATH=$CDPATH::$HOME:/$HOME/Studium/
+CDPATH=$CDPATH::$HOME:/$HOME/THN/

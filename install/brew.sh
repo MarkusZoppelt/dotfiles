@@ -12,7 +12,6 @@ brew install keybase
 brew install markdown
 brew install nvm
 brew install npm
-# brew install qt
 brew install reattach-to-user-namespace
 brew install speedtest_cli
 brew install tmux

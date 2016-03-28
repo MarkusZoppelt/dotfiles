@@ -4,8 +4,8 @@ source ~/.vim/plugins.vim
 set autoread
 inoremap kj <ESC>
 let mapleader=","
+
 color smyck
-nmap <leader>p :color visualstudio<CR>
 
 syntax on
 filetype plugin on
@@ -13,7 +13,6 @@ filetype plugin on
 " fix cron fuckup
 au FileType crontab setlocal bkc=yes
 
-set ruler
 set ai
 set vb t_vb=""
 set nu
@@ -61,9 +60,6 @@ command Q q
 " System Clipboard
 set clipboard=unnamed
 
-"Invisible Characters
-set listchars=tab:▸\ ,eol:¬
-" set list
 set hlsearch
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
@@ -72,13 +68,6 @@ highlight SpecialKey guifg=#4a4a59
 set guioptions-=L
 set guioptions-=r
 
-" Development
-autocmd filetype c nnoremap <F4> :w <bar> exec '!gcc '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
-autocmd filetype cpp nnoremap <F4> :w <bar> exec '!g++ '.shellescape('%').' -o '.shellescape('%:r').' && ./'.shellescape('%:r')<CR>
-nmap <leader>z :call VimuxRunCommand("pdflatex main.tex && echo Erfolg")<cr>
-nmap <leader>i :call VimuxRunCommand("makeindex -s document.ist -o document.gls document.glo")<cr>
-nmap <leader>m :call VimuxRunCommand("make")<cr>
-
 " Auto close tags
 :iabbrev </ </<C-X><C-O>
 
@@ -86,11 +75,6 @@ set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 set laststatus=2
-
-" let g:syntastic_always_populate_loc_list = 1
-" let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
 
 " tmuxline
 let g:tmuxline_powerline_separators = 0

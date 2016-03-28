@@ -6,36 +6,28 @@ alias bloglocal="cd ~/blog && jekyll serve --config _config_dev.yml -w"
 alias pi="ssh pi@pi.zoppelt.net"
 alias pizero="ssh pi@pizero.zoppelt.net"
 
-_macadmin()
-{
-tmux new-session -d -s admin
-tmux send-keys 'ssh markuszoppelt@mac9lab.informatik.fh-nuernberg.de' 'C-m'
-tmux splitw
-tmux send-keys 'ssh markuszoppelt@mac1lab.informatik.fh-nuernberg.de' 'C-m'
-tmux splitw
-tmux send-keys 'ssh markuszoppelt@mac2lab.informatik.fh-nuernberg.de' 'C-m'
-tmux splitw
-tmux send-keys 'ssh markuszoppelt@mac3lab.informatik.fh-nuernberg.de' 'C-m'
-tmux select-layout tiled
-tmux splitw
-tmux send-keys 'ssh markuszoppelt@mac4lab.informatik.fh-nuernberg.de' 'C-m'
-tmux splitw
-tmux send-keys 'ssh markuszoppelt@mac5lab.informatik.fh-nuernberg.de' 'C-m'
-tmux select-layout tiled
-tmux splitw
-tmux send-keys 'ssh markuszoppelt@mac6lab.informatik.fh-nuernberg.de' 'C-m'
-tmux select-layout tiled
-tmux splitw
-tmux send-keys 'ssh markuszoppelt@mac7lab.informatik.fh-nuernberg.de' 'C-m'
-tmux select-layout tiled
-tmux splitw
-tmux send-keys 'ssh markuszoppelt@mac8lab.informatik.fh-nuernberg.de' 'C-m'
-tmux select-layout tiled
-tmux -2 attach-session -t admin	
-}
-alias macadmin=_macadmin
+# git aliases
+alias ga='git add .'
+alias gc='git commit'
+alias gp='git push'
+alias gst='git status'
+alias git-undo='git reset --soft HEAD~1'
 
-# tmux resizing
+function g() {
+    if [[ $# > 0 ]]; then
+        # if there are arguments, send them to git
+        git $@
+    else
+        # otherwise, run git status
+        git status
+    fi
+}
+
+# tmux aliases
+alias ta='tmux attach'
+alias tls='tmux ls'
+alias tat='tmux attach -t'
+alias tns='tmux new-session -s'
 alias tdown="tmux resize-pane -D $1"
 alias tright="tmux resize-pane -R $1"
 alias tleft="tmux resize-pane -L $1"

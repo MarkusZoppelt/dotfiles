@@ -1,8 +1,8 @@
 alias ll="ls -l"
 alias uberspace="ssh mzoppelt@zoppelt.net"
-alias blogupdate="cd ~/blog ; jekyll build && scp -r _site/* mzoppelt@zoppelt.net:html/ "
-alias blogupdate-lite="cd ~/blog ; jekyll build && scp -r _site/*[^assets/] mzoppelt@zoppelt.net:html/ "
-alias bloglocal="cd ~/blog && jekyll serve --config _config_dev.yml -w"
+alias blogupdate="cd ~/code/blog ; jekyll build && scp -r _site/* mzoppelt@zoppelt.net:html/ "
+alias blogupdate-lite="cd ~/code/blog ; jekyll build && scp -r _site/*[^assets/] mzoppelt@zoppelt.net:html/ "
+alias bloglocal="cd ~/code/blog && jekyll serve --config _config_dev.yml --drafts -w"
 alias pi="ssh pi@pi.zoppelt.net"
 alias pizero="ssh pi@pizero.zoppelt.net"
 

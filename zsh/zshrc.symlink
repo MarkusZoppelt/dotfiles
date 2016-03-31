@@ -13,7 +13,6 @@ if [[ -a ~/.localrc ]]; then
     source ~/.localrc
 fi
 
-
 # initialize autocomplete
 autoload -U compinit
 compinit
@@ -42,34 +41,29 @@ fi
 if [[ -d /usr/bin: ]]; then
 	export PATH=/usr/bin:$PATH
 fi
+
 if [[ -d /bin ]]; then
 	export PATH=/bin:$PATH
 fi
+
 if [[ -d /usr/sbin ]]; then
 	export PATH=/usr/sbin:$PATH
 fi
+
 if [[ -d /sbin ]]; then
 	export PATH=/sbin:$PATH
 fi
-if [[ -d /opt/X11/bin ]]; then
-	export PATH=/opt/X11/bin:$PATH
-fi
-if [[ -d /Applications/Server.app/Contents/ServerRoot/usr/bin ]]; then
-	export PATH=/Applications/Server.app/Contents/ServerRoot/usr/bin:$PATH
-fi
-if [[ -d /Applications/Server.app/Contents/ServerRoot/usr/sbin ]]; then
-	export PATH=/Applications/Server.app/Contents/ServerRoot/usr/sbin:$PATH
-fi
+
 if [[ -d /usr/local/git/bin ]]; then
 	export PATH=/usr/local/git/bin:$PATH
 fi
+
 if [[ -d /usr/local/MacGPG2/bin ]]; then
 	export PATH=/usr/local/MacGPG2/bin:$PATH
 fi
 
 export MANPATH="/usr/local/man:$MANPATH"
 
-autoload edit-command-line
 autoload -U compinit
 autoload -U zmv
 autoload zcalc

@@ -1,6 +1,7 @@
 [user]
 	name = MarkusZoppelt
 	email = markus@zoppelt.net
+	signingkey = C48889AD
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f

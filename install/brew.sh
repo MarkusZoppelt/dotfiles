@@ -5,6 +5,7 @@ brew install aria2
 brew install cmake
 brew install ffmpeg
 brew install git
+brew install hub
 brew install imagemagick
 brew install macvim --override-system-vim
 brew install irssi

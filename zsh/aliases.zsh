@@ -7,6 +7,7 @@ alias pi="ssh pi@pi.zoppelt.net"
 alias pizero="ssh pi@pizero.zoppelt.net"
 
 # git aliases
+alias git=hub
 alias ga='git add .'
 alias gc='git commit'
 alias gp='git push'

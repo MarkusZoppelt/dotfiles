@@ -7,7 +7,7 @@ brew install ffmpeg
 brew install git
 brew install hub
 brew install imagemagick
-brew install macvim --override-system-vim
+brew install macvim --with-override-system-vim
 brew install irssi
 brew install keybase
 brew install markdown

@@ -18,6 +18,8 @@ set vb t_vb=""
 set nu
 set relativenumber
 set mouse=a
+set ttymouse=xterm2
+
 set backspace=indent,eol,start
 highlight LineNr ctermfg=lightgrey ctermbg=darkgray
 
@@ -36,7 +38,7 @@ set foldlevel=1
 set wrap
 " set wrapmargin=8
 set linebreak
-set showbreak=…
+" set showbreak=…
 
 
 " Mapping save

@@ -84,5 +84,5 @@ bindkey '^[[B' history-substring-search-down
 setopt correct
 setopt auto_cd
 
-CDPATH=$CDPATH::$HOME:/$HOME/Studium/
+CDPATH=$CDPATH::$HOME:/$HOME/code/
 CDPATH=$CDPATH::$HOME:/$HOME/THN/

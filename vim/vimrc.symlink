@@ -13,6 +13,12 @@ filetype plugin on
 " fix cron fuckup
 au FileType crontab setlocal bkc=yes
 
+" fix latex fuckup
+autocmd BufNewFile,BufRead *.tex set ft=tex
+autocmd BufNewFile,BufRead *.tex VimtexCompile
+autocmd BufRead *.tex VimtexLacheck
+autocmd BufWritePost *.tex VimtexLacheck
+
 set ai
 set vb t_vb=""
 set nu
@@ -53,6 +59,8 @@ let g:netrw_liststyle    = 1 " or 3
 let g:netrw_sort_options = 'i'
 autocmd VimEnter * if isdirectory(expand('<afile>')) | Explore | endif
 map <C-n> :Explore<CR>
+au FileType tex map <C-n> :VimtexTocToggle<CR>
+map <leader>m :call system("make && open ../**/Master*.pdf ; say -v Vicki Compilation Complete & ")<CR>
 
 command WQ wq
 command Wq wq

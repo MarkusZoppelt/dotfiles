@@ -29,7 +29,7 @@ brew cask install omnifocus
 brew cask install backblaze
 brew cask install bibdesk
 brew cask install gfxCardStatus
-brew cask install textmate
 brew cask install flux
 brew cask install dropbox
 brew cask install gpgtools
+brew cask install mactex

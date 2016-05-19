@@ -8,7 +8,7 @@
 [credential]
 	helper = osxkeychain
 [core]
-	excludesfile = /Users/markuszoppelt/.gitignore_global
+	excludesfile = /Users/mz/.gitignore_global
 	editor = vim
 [push]
 	default = simple

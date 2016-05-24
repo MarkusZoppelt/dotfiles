@@ -1,4 +1,4 @@
-alias ll="ls -l"
+alias ll="ls -lF"
 alias uberspace="ssh mzoppelt@zoppelt.net"
 alias blogupdate="cd ~/code/blog ; jekyll build && scp -r _site/* mzoppelt@zoppelt.net:html/ "
 alias blogupdate-lite="cd ~/code/blog ; jekyll build && scp -r _site/*[^assets/] mzoppelt@zoppelt.net:html/ "
@@ -33,3 +33,16 @@ alias tdown="tmux resize-pane -D $1"
 alias tright="tmux resize-pane -R $1"
 alias tleft="tmux resize-pane -L $1"
 alias tup="tmux resize-pane -U $1"
+
+
+alias -s tex=vim
+alias -s txt=vim
+alias -s cpp=vim
+alias -s java=vim
+alias -s c=vim
+alias -s md=vim
+alias -s html=vim
+alias -s css=vim
+alias -s js=vim
+alias -s py=vim
+alias -s sh=vim

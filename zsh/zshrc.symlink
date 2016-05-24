@@ -86,3 +86,4 @@ setopt auto_cd
 
 CDPATH=$CDPATH::$HOME:/$HOME/code/
 CDPATH=$CDPATH::$HOME:/$HOME/THN/
+

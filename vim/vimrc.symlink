@@ -18,12 +18,13 @@ set vb t_vb=""
 set nu
 set relativenumber
 set mouse=a
-set ttymouse=xterm2
+" set ttymouse=xterm2
 
 set backspace=indent,eol,start
 highlight LineNr ctermfg=lightgrey ctermbg=darkgray
 
 autocmd StdinReadPre * let s:std_in=1
+autocmd! BufWritePost * Neomake
 
 " faster redrawing
 set ttyfast

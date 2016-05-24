@@ -13,6 +13,7 @@ Plugin 'bling/vim-airline'
 Plugin 'edkolev/tmuxline.vim'
 Plugin 'vim-scripts/Greplace.vim'
 Plugin 'lervag/vimtex'
+Plugin 'neomake/neomake'
 
 call vundle#end()
 filetype plugin indent on

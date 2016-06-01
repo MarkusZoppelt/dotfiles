@@ -45,4 +45,3 @@ alias -s html=vim
 alias -s css=vim
 alias -s js=vim
 alias -s py=vim
-alias -s sh=vim

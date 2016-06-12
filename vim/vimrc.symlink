@@ -18,7 +18,6 @@ set vb t_vb=""
 set nu
 set relativenumber
 set mouse=a
-" set ttymouse=xterm2
 
 set backspace=indent,eol,start
 highlight LineNr ctermfg=lightgrey ctermbg=darkgray
@@ -29,17 +28,9 @@ autocmd! BufWritePost * Neomake
 " faster redrawing
 set ttyfast
 
-" code folding
-set foldmethod=syntax
-set foldnestmax=10
-set nofoldenable
-set foldlevel=1
-
 " line wrapping
 set wrap
-" set wrapmargin=8
 set linebreak
-" set showbreak=…
 
 " Mapping save
 nmap <leader>, :w<cr>
@@ -66,10 +57,6 @@ set hlsearch
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
-" No scrollbars in MacVim
-set guioptions-=L
-set guioptions-=r
-
 " Auto close tags
 :iabbrev </ </<C-X><C-O>
 
@@ -83,8 +70,5 @@ let g:tmuxline_powerline_separators = 0
 
 " fix latex fuckup
 autocmd BufNewFile,BufRead *.tex set ft=tex
-autocmd BufNewFile,BufRead *.tex VimtexCompile
-autocmd BufNewFile,BufRead *.tex set spell
-autocmd BufNewFile,BufRead *.tex set spelllang=de
 au FileType tex map <leader>m :VimtexLacheck<CR>
 au FileType tex map <C-n> :VimtexTocToggle<CR>

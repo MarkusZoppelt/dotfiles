@@ -43,9 +43,6 @@ set -g terminal-overrides 'xterm*:smcup@:rmcup@'
 # Status Bar
 ###########################
 
-# enable UTF-8 support in status bar
-set -g status-utf8 on
-
 # set refresh interval for status bar
 set -g status-interval 30
 

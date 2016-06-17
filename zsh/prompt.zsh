@@ -70,6 +70,13 @@ simple_prompt() {
 	export PROMPT='%F{green}%~ %F{green}❯ %f' 
 }
 
+git_prompt() {
+	precmd() {
+	    vcs_info
+	}
+	export RPROMPT='`git_dirty`%F{241}$vcs_info_msg_0_%f `needs_push``suspended_jobs`'
+}
+
 full_prompt() {
 	precmd() {
 	    vcs_info
@@ -81,3 +88,4 @@ full_prompt() {
 }
 
 simple_prompt
+git_prompt

@@ -9,16 +9,14 @@ brew install hub
 brew install imagemagick
 # brew install macvim --with-override-system-vim
 brew install neovim/neovim/neovim
-brew install irssi
 brew install keybase
 brew install markdown
-brew install nvm
-brew install npm
+# brew install nvm
+# brew install npm
 brew install reattach-to-user-namespace
 brew install tmux
 brew install wget
 brew install youtube-dl
-brew install zsh
 brew tap beeftornado/rmtree && brew install beeftornado/rmtree/brew-rmtree
 
 # brew cask

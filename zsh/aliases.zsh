@@ -6,6 +6,13 @@ alias bloglocal="cd ~/code/blog && jekyll serve --config _config_dev.yml --draft
 alias pi="ssh pi@pi.zoppelt.net"
 alias pizero="ssh pi@pizero.zoppelt.net"
 
+function _compresspdf() {
+  filename=$1
+  gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=tmp_comp.pdf $filename &&\
+  mv tmp_comp.pdf $filename
+}
+alias compresspdf=_compresspdf
+
 # git aliases
 alias git=hub
 alias ga='git add .'

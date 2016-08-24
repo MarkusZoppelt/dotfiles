@@ -19,8 +19,6 @@ zstyle ':vcs_info:*' enable git # You can add hg too if needed: `git hg`
 zstyle ':vcs_info:git*' formats ' %b'
 zstyle ':vcs_info:git*' actionformats ' %b|%a'
 
-autoload colors && colors
-
 git_dirty() {
     # check if we're in a git repo
     command git rev-parse --is-inside-work-tree &>/dev/null || return

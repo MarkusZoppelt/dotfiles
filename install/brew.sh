@@ -11,8 +11,6 @@ brew install imagemagick
 brew install neovim/neovim/neovim
 brew install keybase
 brew install markdown
-# brew install nvm
-# brew install npm
 brew install reattach-to-user-namespace
 brew install tmux
 brew install wget
@@ -24,6 +22,4 @@ brew install caskroom/cask/brew-cask
 brew cask install mailmate
 brew cask install omnifocus
 brew cask install backblaze
-brew cask install bibdesk
 brew cask install gpgtools
-brew cask install mactex

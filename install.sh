@@ -2,9 +2,6 @@
 
 echo "installing dotfiles"
 
-echo "initializing submodule(s)"
-# git submodule update --init --recursive
-
 source install/link.sh
 
 if [ "$(uname)" == "Darwin" ]; then

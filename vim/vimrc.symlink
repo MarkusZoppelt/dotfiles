@@ -15,8 +15,8 @@ au FileType crontab setlocal bkc=yes
 
 set ai
 set vb t_vb=""
-set nu
-set relativenumber
+" set nu
+" set relativenumber
 set mouse=a
 
 set backspace=indent,eol,start

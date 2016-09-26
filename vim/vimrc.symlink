@@ -15,8 +15,6 @@ au FileType crontab setlocal bkc=yes
 
 set ai
 set vb t_vb=""
-" set nu
-" set relativenumber
 set mouse=a
 
 set backspace=indent,eol,start
@@ -66,3 +64,6 @@ let g:tmuxline_powerline_separators = 0
 autocmd BufNewFile,BufRead *.tex set ft=tex
 au FileType tex map <leader>m :VimtexLacheck<CR>
 au FileType tex map <C-n> :VimtexTocToggle<CR>
+
+" run scripts via shortcut in a new tmux split
+nmap <leader>r :silent !tmux splitw -v ./% && exit<cr>

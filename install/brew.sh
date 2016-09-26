@@ -19,7 +19,5 @@ brew tap beeftornado/rmtree && brew install beeftornado/rmtree/brew-rmtree
 
 # brew cask
 brew install caskroom/cask/brew-cask
-brew cask install mailmate
-brew cask install omnifocus
 brew cask install backblaze
 brew cask install gpgtools

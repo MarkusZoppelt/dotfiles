@@ -7,15 +7,14 @@ brew install git
 brew install git-lfs
 brew install hub
 brew install imagemagick
+brew install keybase
 # brew install macvim --with-override-system-vim
 brew install neovim/neovim/neovim
-brew install keybase
-brew install markdown
 brew install reattach-to-user-namespace
+brew install beeftornado/rmtree/brew-rmtree
 brew install tmux
 brew install wget
 brew install youtube-dl
-brew tap beeftornado/rmtree && brew install beeftornado/rmtree/brew-rmtree
 
 # brew cask
 brew install caskroom/cask/brew-cask

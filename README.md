@@ -1,7 +1,5 @@
 # Dotfiles
 
-Credit to [nicknisi](https://github.com/nicknisi) (I'm using his setup and modified it)
-
 ## Contents
 
 + zsh configuration

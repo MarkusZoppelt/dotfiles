@@ -18,5 +18,3 @@ brew install youtube-dl
 
 # brew cask
 brew install caskroom/cask/brew-cask
-brew cask install backblaze
-brew cask install gpgtools

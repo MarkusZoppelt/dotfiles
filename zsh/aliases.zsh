@@ -1,8 +1,4 @@
 alias ll="ls -lF"
-alias uberspace="ssh mzoppelt@zoppelt.net"
-alias blogupdate="cd ~/code/blog ; jekyll build && scp -r _site/* mzoppelt@zoppelt.net:html/ "
-alias blogupdate-lite="cd ~/code/blog ; jekyll build && scp -r _site/*[^assets/] mzoppelt@zoppelt.net:html/ "
-alias bloglocal="cd ~/code/blog && jekyll serve --config _config_dev.yml --drafts -w"
 
 # git aliases
 alias git=hub

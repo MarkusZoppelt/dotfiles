@@ -14,6 +14,7 @@ Plugin 'edkolev/tmuxline.vim'
 Plugin 'vim-scripts/Greplace.vim'
 Plugin 'lervag/vimtex'
 Plugin 'neomake/neomake'
+Plugin 'rhysd/vim-clang-format'
 
 call vundle#end()
 filetype plugin indent on

@@ -35,3 +35,11 @@ function compresspdf() {
   gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=tmp_comp.pdf $filename &&\
   mv tmp_comp.pdf $filename
 }
+function conv2gif()
+{
+	videofile=$1
+	mkdir giffy
+	ffmpeg -i $videofile -t 30 giffy/%04d.png
+	convert giffy/%04d.png -delay 3 $videofile giffy.gif
+	rm -rf giffy/
+}

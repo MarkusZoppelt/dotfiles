@@ -18,8 +18,6 @@ alias tright="tmux resize-pane -R $1"
 alias tleft="tmux resize-pane -L $1"
 alias tup="tmux resize-pane -U $1"
 
-# ----- FUNCTIONS -----
-
 function g() {
     if [[ $# > 0 ]]; then
         # if there are arguments, send them to git
@@ -28,18 +26,4 @@ function g() {
         # otherwise, run git status
         git status
     fi
-}
-
-function compresspdf() {
-  filename=$1
-  gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=tmp_comp.pdf $filename &&\
-  mv tmp_comp.pdf $filename
-}
-function conv2gif()
-{
-	videofile=$1
-	mkdir giffy
-	ffmpeg -i $videofile -t 30 giffy/%04d.png
-	convert giffy/%04d.png -delay 3 $videofile giffy.gif
-	rm -rf giffy/
 }

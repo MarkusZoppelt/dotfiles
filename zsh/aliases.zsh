@@ -1,8 +1,4 @@
 alias ll="ls -lF"
-alias uberspace="ssh mzoppelt@zoppelt.net"
-alias blogupdate="cd ~/code/blog ; jekyll build && scp -r _site/* mzoppelt@zoppelt.net:html/ "
-alias blogupdate-lite="cd ~/code/blog ; jekyll build && scp -r _site/*[^assets/] mzoppelt@zoppelt.net:html/ "
-alias bloglocal="cd ~/code/blog && jekyll serve --config _config_dev.yml --drafts -w"
 
 # git aliases
 alias git=hub
@@ -22,8 +18,6 @@ alias tright="tmux resize-pane -R $1"
 alias tleft="tmux resize-pane -L $1"
 alias tup="tmux resize-pane -U $1"
 
-# ----- FUNCTIONS -----
-
 function g() {
     if [[ $# > 0 ]]; then
         # if there are arguments, send them to git
@@ -32,10 +26,4 @@ function g() {
         # otherwise, run git status
         git status
     fi
-}
-
-function compresspdf() {
-  filename=$1
-  gs -sDEVICE=pdfwrite -dCompatibilityLevel=1.4 -dPDFSETTINGS=/printer -dNOPAUSE -dQUIET -dBATCH -sOutputFile=tmp_comp.pdf $filename &&\
-  mv tmp_comp.pdf $filename
 }

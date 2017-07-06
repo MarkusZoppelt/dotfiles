@@ -4,6 +4,9 @@ export ZSH=$DOTFILES/zsh
 # define the code directory
 if [[ -d ~/code ]]; then
     export CODE_DIR=~/code
+    if [[ -d ~/code/scripts ]]; then
+        export PATH=$PATH:~/code/scripts
+    fi
 fi
 
 # load all zsh config files

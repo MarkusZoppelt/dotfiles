@@ -15,6 +15,7 @@ Plugin 'vim-scripts/Greplace.vim'
 Plugin 'lervag/vimtex'
 Plugin 'neomake/neomake'
 Plugin 'xuhdev/vim-latex-live-preview'
+Plugin 'rhysd/vim-clang-format'
 
 call vundle#end()
 filetype plugin indent on

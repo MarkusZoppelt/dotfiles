@@ -1,6 +1,6 @@
 [user]
-	name = MarkusZoppelt
-	email = markus@zoppelt.net
+	name = Markus Zoppelt
+	email = markus.zoppelt@th-nuernberg.de
 	signingkey = C48889AD
 [filter "media"]
 	clean = git-media-clean %f

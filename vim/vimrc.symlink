@@ -67,3 +67,7 @@ au FileType tex map <C-n> :VimtexTocToggle<CR>
 
 " run scripts via shortcut in a new tmux split
 nmap <leader>r :silent !tmux splitw -v ./% && exit<cr>
+au FileType c nmap <leader>r :!tmux splitw -v gcc % && sleep 0.1 && ./a.out<CR>
+
+autocmd BufWritePost *.dot !dot -Tpng % -o %.png && touch *.md
+let g:livepreview_previewer = 'open -a Skim'

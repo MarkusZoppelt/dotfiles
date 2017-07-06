@@ -82,5 +82,6 @@ setopt correct
 setopt auto_cd
 
 CDPATH=$CDPATH::$HOME:/$HOME/code/
+CDPATH=$CDPATH::$HOME://Users/mz/FAUbox/
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

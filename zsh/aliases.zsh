@@ -1,3 +1,4 @@
+alias ls=exa
 alias ll="ls -lF"
 
 # git aliases

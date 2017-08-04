@@ -14,6 +14,7 @@ brew install beeftornado/rmtree/brew-rmtree
 brew install tmux
 brew install wget
 brew install youtube-dl
+brew install exa
 
 # brew cask
 brew install caskroom/cask/brew-cask

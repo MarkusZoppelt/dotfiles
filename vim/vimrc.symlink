@@ -20,17 +20,12 @@ set mouse=a
 set backspace=indent,eol,start
 highlight LineNr ctermfg=lightgrey ctermbg=darkgray
 
-autocmd StdinReadPre * let s:std_in=1
-autocmd! BufWritePost * Neomake
-
 " line wrapping
 set wrap
 set linebreak
 
 " Mapping save
 nmap <leader>, :w<cr>
-
-map <leader>t :tabnew<CR>
 
 " netrw options
 let g:netrw_banner       = 0
@@ -51,23 +46,3 @@ set clipboard=unnamed
 set hlsearch
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
-
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-set laststatus=2
-
-" tmuxline
-let g:tmuxline_powerline_separators = 0
-
-" fix latex fuckup
-autocmd BufNewFile,BufRead *.tex set ft=tex
-au FileType tex map <leader>m :VimtexLacheck<CR>
-au FileType tex map <C-n> :VimtexTocToggle<CR>
-
-" run scripts via shortcut in a new tmux split
-nmap <leader>r :silent !tmux splitw -v ./% && exit<cr>
-au FileType c nmap <leader>r :!tmux splitw -v gcc % && sleep 0.1 && ./a.out<CR>
-
-autocmd BufWritePost *.dot !dot -Tpng % -o %.png && touch *.md
-let g:livepreview_previewer = 'open -a Skim'

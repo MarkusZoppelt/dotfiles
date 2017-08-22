@@ -1,6 +1,3 @@
-export DOTFILES=$HOME/.dotfiles
-export ZSH=$DOTFILES/zsh
-
 # define the code directory
 if [[ -d ~/code ]]; then
     export CODE_DIR=~/code
@@ -8,9 +5,6 @@ if [[ -d ~/code ]]; then
         export PATH=$PATH:~/code/scripts
     fi
 fi
-
-# load all zsh config files
-for config ($ZSH/**/*.zsh) source $config
 
 if [[ -a ~/.localrc ]]; then
     source ~/.localrc
@@ -24,18 +18,9 @@ export EDITOR='vim'
 
 export PATH=/usr/local/bin:$PATH
 
-# add /usr/local/sbin
-if [[ -d /usr/local/sbin ]]; then
-    export PATH=/usr/local/sbin:$PATH
-fi
-
 # check for custom bin directory and add to path
 if [[ -d ~/bin ]]; then
     export PATH=~/bin:$PATH
-fi
-
-if [[ -d /usr/texbin ]]; then
-	export PATH=/usr/texbin:$PATH
 fi
 
 if [[ -d /usr/bin: ]]; then
@@ -46,45 +31,110 @@ if [[ -d /bin ]]; then
 	export PATH=/bin:$PATH
 fi
 
-if [[ -d /usr/sbin ]]; then
-	export PATH=/usr/sbin:$PATH
-fi
-
-if [[ -d /sbin ]]; then
-	export PATH=/sbin:$PATH
-fi
-
-if [[ -d /usr/local/git/bin ]]; then
-	export PATH=/usr/local/git/bin:$PATH
-fi
-
-if [[ -d /usr/local/MacGPG2/bin ]]; then
-	export PATH=/usr/local/MacGPG2/bin:$PATH
-fi
-
 export MANPATH="/usr/local/man:$MANPATH"
 
-autoload -U compinit
-autoload -U zmv
-autoload zcalc
-
 [ -z "$TMUX" ] && export TERM=xterm-256color
-
-# History magic
-# source zsh-history-substring-search.zsh
-# bind UP and DOWN arrow keys
-zmodload zsh/terminfo
-bindkey "$terminfo[kcuu1]" history-substring-search-up
-bindkey "$terminfo[kcud1]" history-substring-search-down
-# bind UP and DOWN arrow keys (compatibility fallback
-# for Ubuntu 12.04, Fedora 21, and MacOSX 10.9 users)
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
 
 setopt correct
 setopt auto_cd
 
 CDPATH=$CDPATH::$HOME:/$HOME/code/
-CDPATH=$CDPATH::$HOME://Users/mz/FAUbox/
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+setopt NO_BG_NICE
+setopt NO_HUP
+setopt NO_LIST_BEEP
+setopt LOCAL_OPTIONS
+setopt LOCAL_TRAPS
+setopt PROMPT_SUBST
+
+HISTFILE=~/.zsh_history
+HISTSIZE=10000
+SAVEHIST=10000
+
+# history
+setopt HIST_VERIFY
+setopt EXTENDED_HISTORY
+setopt HIST_REDUCE_BLANKS
+setopt SHARE_HISTORY
+setopt HIST_IGNORE_ALL_DUPS
+setopt INC_APPEND_HISTORY SHARE_HISTORY
+setopt APPEND_HISTORY
+
+setopt COMPLETE_ALIASES
+
+# make terminal command navigation sane again
+alias ll="ls -lF"
+
+# git aliases
+alias git=hub
+alias ga='git add .'
+alias gc='git commit'
+alias gp='git push'
+alias gst='git status'
+function g() {
+    if [[ $# > 0 ]]; then
+        # if there are arguments, send them to git
+        git $@
+    else
+        # otherwise, run git status
+        git status
+    fi
+}
+
+# tmux aliases
+alias ta='tmux attach'
+alias tls='tmux ls'
+
+## --- PROMPT --- ##
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git # You can add hg too if needed: `git hg`
+zstyle ':vcs_info:git*' formats ' %b'
+zstyle ':vcs_info:git*' actionformats ' %b|%a'
+
+git_dirty() {
+    # check if we're in a git repo
+    command git rev-parse --is-inside-work-tree &>/dev/null || return
+
+    # check if it's dirty
+    command git diff --quiet --ignore-submodules HEAD &>/dev/null;
+    if [[ $? -eq 1 ]]; then
+        echo "%F{red}✗%f "
+    else
+        echo "%F{magenta}✔%f "
+    fi
+}
+
+git_prompt_info() {
+ ref=$(/usr/bin/git symbolic-ref HEAD 2>/dev/null) || return
+ echo "${ref#refs/heads/}"
+}
+
+needs_push() {
+  if [[ $(git cherry -v @{upstream} 2>/dev/null) == "" ]]
+  then
+    echo ""
+  else
+    echo "%{$fg_bold[magenta]%}☁%{$reset_color%} "
+  fi
+}
+
+precmd() {
+    vcs_info
+    print -P '\n%F{green}%m:%F{blue}%~'
+}
+
+simple_prompt() {
+	precmd(){}
+	export RPROMPT=''
+	export PROMPT='%F{green}%~ %F{green}❯ %f' 
+}
+
+git_prompt() {
+	precmd() {
+	    vcs_info
+	}
+	export RPROMPT='`git_dirty`%F{241}$vcs_info_msg_0_%f `needs_push`'
+}
+
+simple_prompt
+git_prompt

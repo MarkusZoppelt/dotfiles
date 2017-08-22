@@ -1,4 +1,3 @@
-alias ls=exa
 alias ll="ls -lF"
 
 # git aliases
@@ -7,7 +6,6 @@ alias ga='git add .'
 alias gc='git commit'
 alias gp='git push'
 alias gst='git status'
-alias git-undo='git reset --soft HEAD~1'
 
 # tmux aliases
 alias ta='tmux attach'

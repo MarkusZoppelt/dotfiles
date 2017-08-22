@@ -1,37 +1,13 @@
-# define the code directory
-if [[ -d ~/code ]]; then
-    export CODE_DIR=~/code
-    if [[ -d ~/code/scripts ]]; then
-        export PATH=$PATH:~/code/scripts
-    fi
-fi
+export DOTFILES=$HOME/.dotfiles
+export ZSH=$DOTFILES/zsh
+
+for config ($ZSH/**/*.zsh) source $config
 
 if [[ -a ~/.localrc ]]; then
     source ~/.localrc
 fi
 
-# initialize autocomplete
-autoload -U compinit
-compinit
-
 export EDITOR='vim'
-
-export PATH=/usr/local/bin:$PATH
-
-# check for custom bin directory and add to path
-if [[ -d ~/bin ]]; then
-    export PATH=~/bin:$PATH
-fi
-
-if [[ -d /usr/bin: ]]; then
-	export PATH=/usr/bin:$PATH
-fi
-
-if [[ -d /bin ]]; then
-	export PATH=/bin:$PATH
-fi
-
-export MANPATH="/usr/local/man:$MANPATH"
 
 [ -z "$TMUX" ] && export TERM=xterm-256color
 
@@ -50,8 +26,6 @@ setopt PROMPT_SUBST
 HISTFILE=~/.zsh_history
 HISTSIZE=10000
 SAVEHIST=10000
-
-# history
 setopt HIST_VERIFY
 setopt EXTENDED_HISTORY
 setopt HIST_REDUCE_BLANKS
@@ -59,82 +33,4 @@ setopt SHARE_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt INC_APPEND_HISTORY SHARE_HISTORY
 setopt APPEND_HISTORY
-
 setopt COMPLETE_ALIASES
-
-# make terminal command navigation sane again
-alias ll="ls -lF"
-
-# git aliases
-alias git=hub
-alias ga='git add .'
-alias gc='git commit'
-alias gp='git push'
-alias gst='git status'
-function g() {
-    if [[ $# > 0 ]]; then
-        # if there are arguments, send them to git
-        git $@
-    else
-        # otherwise, run git status
-        git status
-    fi
-}
-
-# tmux aliases
-alias ta='tmux attach'
-alias tls='tmux ls'
-
-## --- PROMPT --- ##
-autoload -Uz vcs_info
-zstyle ':vcs_info:*' enable git # You can add hg too if needed: `git hg`
-zstyle ':vcs_info:git*' formats ' %b'
-zstyle ':vcs_info:git*' actionformats ' %b|%a'
-
-git_dirty() {
-    # check if we're in a git repo
-    command git rev-parse --is-inside-work-tree &>/dev/null || return
-
-    # check if it's dirty
-    command git diff --quiet --ignore-submodules HEAD &>/dev/null;
-    if [[ $? -eq 1 ]]; then
-        echo "%F{red}✗%f "
-    else
-        echo "%F{magenta}✔%f "
-    fi
-}
-
-git_prompt_info() {
- ref=$(/usr/bin/git symbolic-ref HEAD 2>/dev/null) || return
- echo "${ref#refs/heads/}"
-}
-
-needs_push() {
-  if [[ $(git cherry -v @{upstream} 2>/dev/null) == "" ]]
-  then
-    echo ""
-  else
-    echo "%{$fg_bold[magenta]%}☁%{$reset_color%} "
-  fi
-}
-
-precmd() {
-    vcs_info
-    print -P '\n%F{green}%m:%F{blue}%~'
-}
-
-simple_prompt() {
-	precmd(){}
-	export RPROMPT=''
-	export PROMPT='%F{green}%~ %F{green}❯ %f' 
-}
-
-git_prompt() {
-	precmd() {
-	    vcs_info
-	}
-	export RPROMPT='`git_dirty`%F{241}$vcs_info_msg_0_%f `needs_push`'
-}
-
-simple_prompt
-git_prompt

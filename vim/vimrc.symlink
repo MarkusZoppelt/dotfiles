@@ -24,6 +24,14 @@ highlight LineNr ctermfg=lightgrey ctermbg=darkgray
 set wrap
 set linebreak
 
+" navigte soft linebreaks
+noremap <silent> k gk
+noremap <silent> <Up> gk
+imap <silent> <Up> <C-o>gk
+noremap <silent> j gj
+noremap <silent> <Down> gj
+imap <silent> <Down> <C-o>gj
+
 " Mapping save
 nmap <leader>, :w<cr>
 

@@ -55,7 +55,4 @@ set hlsearch
 highlight NonText guifg=#4a4a59
 highlight SpecialKey guifg=#4a4a59
 
-" Tentative workaround for https://github.com/vim/vim/issues/2008
-if !empty($TERM_PROGRAM) && $TERM_PROGRAM == 'Apple_Terminal'
-  set t_SH=
-endif
+set guioptions-=r

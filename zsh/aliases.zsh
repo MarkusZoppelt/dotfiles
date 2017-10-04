@@ -1,4 +1,5 @@
 alias ll="ls -lF"
+alias vi=vim
 alias git=hub
 alias ga='git add .'
 alias gc='git commit'

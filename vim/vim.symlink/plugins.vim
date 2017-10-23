@@ -11,7 +11,6 @@ Plugin 'tomtom/tcomment_vim'
 Plugin 'ervandew/supertab'
 Plugin 'bling/vim-airline'
 Plugin 'vim-scripts/Greplace.vim'
-Plugin 'vim-latex/vim-latex'
 Plugin 'scrooloose/nerdtree'
 
 call vundle#end()

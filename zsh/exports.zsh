@@ -21,4 +21,8 @@ if [[ -d /usr/local/bin ]]; then
 	export PATH=/usr/local/bin:$PATH
 fi
 
+if [[ -d /usr/local/sbin ]]; then
+	export PATH=/usr/local/sbin:$PATH
+fi
+
 export MANPATH="/usr/local/man:$MANPATH"

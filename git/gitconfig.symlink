@@ -10,6 +10,7 @@
 [core]
 	excludesfile = /Users/mz/.gitignore_global
 	editor = vim
+	quotepath = false
 [push]
 	default = simple
 

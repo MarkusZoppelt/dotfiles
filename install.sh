@@ -5,7 +5,7 @@ echo "installing dotfiles"
 source install/link.sh
 
 if [ "$(uname)" == "Darwin" ]; then
-    echo "running on OSX"
+    echo "running on macOS"
 	
     echo "installing homebrew"
     ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
@@ -13,8 +13,8 @@ if [ "$(uname)" == "Darwin" ]; then
     echo "brewing all the things"
     source install/brew.sh
 
-    echo "updating OSX settings"
-    source install/osx.sh
+    echo "updating macOS settings"
+    source install/macOS.sh
 fi
 
 echo "Vundle extra..."

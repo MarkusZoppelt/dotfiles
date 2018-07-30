@@ -58,6 +58,7 @@ highlight SpecialKey guifg=#4a4a59
 set guioptions-=r
 
 map <C-n> :NERDTreeToggle<CR>
+autocmd FileType tex map <C-n> :VimtexTocToggle<CR>
 
 " fold all comments in LaTeX documents
 autocmd VimEnter * set foldmethod=expr foldexpr=getline(v:lnum)=~'^\s*'.&commentstring[0]

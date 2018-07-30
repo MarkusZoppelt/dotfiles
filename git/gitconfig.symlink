@@ -10,6 +10,11 @@
 [core]
 	excludesfile = /Users/mz/.gitignore_global
 	editor = vim
+	quotepath = false
 [push]
 	default = simple
-
+[diff "pandoc"]
+  textconv=pandoc --to=markdown
+  prompt = false
+[alias]
+  wdiff = diff --word-diff=color --unified=1

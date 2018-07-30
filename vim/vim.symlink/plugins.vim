@@ -12,6 +12,7 @@ Plugin 'ervandew/supertab'
 Plugin 'bling/vim-airline'
 Plugin 'vim-scripts/Greplace.vim'
 Plugin 'scrooloose/nerdtree'
+Plugin 'lervag/vimtex'
 
 call vundle#end()
 filetype plugin indent on

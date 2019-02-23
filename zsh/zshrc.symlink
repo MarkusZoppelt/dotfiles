@@ -16,14 +16,6 @@ setopt auto_cd
 
 CDPATH=$CDPATH::$HOME:/$HOME/code/
 
-if [[ -a ~/Dokumente/. ]]; then
-	CDPATH=$CDPATH::$HOME/Dokumente/
-fi
-
-if [[ -a ~/Documents/. ]]; then
-	CDPATH=$CDPATH::$HOME/Documents/
-fi
-
 setopt NO_BG_NICE
 setopt NO_HUP
 setopt NO_LIST_BEEP

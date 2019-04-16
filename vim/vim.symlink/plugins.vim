@@ -13,6 +13,7 @@ Plugin 'bling/vim-airline'
 Plugin 'vim-scripts/Greplace.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'lervag/vimtex'
+Plugin 'rust-lang/rust.vim'
 
 call vundle#end()
 filetype plugin indent on

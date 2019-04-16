@@ -14,6 +14,7 @@ Plugin 'vim-scripts/Greplace.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'lervag/vimtex'
 Plugin 'rust-lang/rust.vim'
+Plugin 'vim-syntastic/syntastic'
 
 call vundle#end()
 filetype plugin indent on

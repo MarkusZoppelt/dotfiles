@@ -1,7 +1,7 @@
 [user]
 	name = Markus Zoppelt
 	email = markus.zoppelt@th-nuernberg.de
-	signingkey = C48889AD
+	signingkey = 12A3D92C
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
@@ -14,3 +14,5 @@
 [push]
 	default = simple
 
+[commit]
+	gpgsign = true

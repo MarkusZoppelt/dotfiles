@@ -26,3 +26,5 @@ if [[ -d /usr/local/sbin ]]; then
 fi
 
 export MANPATH="/usr/local/man:$MANPATH"
+
+export HOMEBREW_NO_ANALYTICS=1

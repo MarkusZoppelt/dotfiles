@@ -25,6 +25,10 @@ if [[ -d /usr/local/sbin ]]; then
 	export PATH=/usr/local/sbin:$PATH
 fi
 
+if [[ -d ~/.local/bin ]]; then
+	export PATH=~/.local/bin:$PATH
+fi
+
 export MANPATH="/usr/local/man:$MANPATH"
 
 export HOMEBREW_NO_ANALYTICS=1

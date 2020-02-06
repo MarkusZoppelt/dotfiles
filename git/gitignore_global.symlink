@@ -15,3 +15,7 @@ Icon
 
 # project-specific vim configurations
 .vimrc.local
+
+#Redis
+dump.rdb
+

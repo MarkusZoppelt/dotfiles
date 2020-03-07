@@ -19,7 +19,7 @@ fi
 
 echo "Vundle extra..."
 mkdir ~/.vim/bundle
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/vundle
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 
 echo "configuring zsh as default shell"
 chsh -s $(which zsh)

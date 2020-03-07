@@ -35,18 +35,11 @@ imap <silent> <Down> <C-o>gj
 " Mapping save
 nmap <leader>, :w<cr>
 
-" netrw options
-let g:netrw_banner       = 0
-let g:netrw_keepdir      = 0
-let g:netrw_liststyle    = 1 " or 3
-let g:netrw_sort_options = 'i'
-autocmd VimEnter * if isdirectory(expand('<afile>')) | Explore | endif
-map <C-n> :Explore<CR>
-
 command WQ wq
 command Wq wq
 command W w
 command Q q
+command Qa qa
 
 " System Clipboard
 set clipboard=unnamed
@@ -58,7 +51,6 @@ highlight SpecialKey guifg=#4a4a59
 set guioptions-=r
 
 map <C-n> :NERDTreeToggle<CR>
-autocmd FileType tex map <C-n> :VimtexTocToggle<CR>
 
 " fold all comments in LaTeX documents
 autocmd VimEnter * set foldmethod=expr foldexpr=getline(v:lnum)=~'^\s*'.&commentstring[0]

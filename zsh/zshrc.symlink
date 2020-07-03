@@ -14,7 +14,7 @@ export EDITOR='vim'
 setopt correct
 setopt auto_cd
 
-CDPATH=$CDPATH::$HOME:/$HOME/code/
+CDPATH=$CDPATH::$HOME
 
 setopt NO_BG_NICE
 setopt NO_HUP

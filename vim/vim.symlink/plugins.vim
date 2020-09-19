@@ -14,7 +14,7 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-scripts/Greplace.vim'
 Plugin 'preservim/nerdtree'
 Plugin 'rust-lang/rust.vim'
-Plugin 'vim-syntastic/syntastic'
+" Plugin 'vim-syntastic/syntastic'
 Plugin 'zxqfl/tabnine-vim'
 Plugin 'jamessan/vim-gnupg'
 

@@ -15,14 +15,3 @@ alias gp='git push'
 if [[ -a ~/.localrc ]]; then
     source ~/.localrc
 fi
-
-# Rust
-if [[ -a ~/.cargo/env ]]; then
-    source ~/.cargo/env
-fi
-
-if [[ -d ~/code ]]; then
-    if [[ -d ~/code/scripts ]]; then
-        export PATH=$PATH:~/code/scripts
-    fi
-fi

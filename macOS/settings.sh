@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+echo "updating macOS settings"
+
 echo "Finder: show all filename extensions"
 defaults write NSGlobalDomain AppleShowAllExtensions -bool true
 

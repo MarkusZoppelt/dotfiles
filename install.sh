@@ -1,23 +1,22 @@
-#!/bin/bash
-
+#!/bin/sh
 echo "installing dotfiles"
 
-source install/link.sh
+DOTFILES=$HOME/.dotfiles
+
+echo "creating symlinks"
+ln -s $DOTFILES/.zshrc $HOME/.zshrc
+ln -s $DOTFILES/.vimrc $HOME/.vimrc
+ln -s $DOTFILES/.vim $HOME/.vim
+ln -s $DOTFILES/.tmux.conf $HOME/.tmux.conf
+ln -s $DOTFILES/.gitconfig $HOME/.gitconfig
+ln -s $DOTFILES/.gitignore_global $HOME/.gitignore_global
 
 if [ "$(uname)" == "Darwin" ]; then
-    echo "running on macOS"
-	
-    echo "installing homebrew"
-    ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-
-    echo "brewing all the things"
-    source install/brew.sh
-
-    echo "updating macOS settings"
-    source install/macOS.sh
+    echo "running on macOS" 
+    source macOS/brew.sh
+    source macOS/settings.sh
 fi
 
-echo "Vundle extra..."
 mkdir ~/.vim/bundle
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 

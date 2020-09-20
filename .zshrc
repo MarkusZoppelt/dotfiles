@@ -7,7 +7,6 @@ SAVEHIST=10000
 bindkey '^R' history-incremental-pattern-search-backward
 
 alias ll="ls -lF --color"
-alias git=hub
 alias ga='git add .'
 alias gc='git commit'
 alias gp='git push'

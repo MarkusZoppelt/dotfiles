@@ -2,10 +2,6 @@
 
 ## Install
 
-    git clone https://github.com/MarkusZoppelt/dotfiles.git ~/.dotfiles
+    git clone --recurse-submodules https://github.com/MarkusZoppelt/dotfiles.git ~/.dotfiles
     cd ~/.dotfiles
     ./install.sh
-
-## VIM Plugins
-
-    vim +PluginInstall

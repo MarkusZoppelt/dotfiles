@@ -17,8 +17,5 @@ if [ "$(uname)" == "Darwin" ]; then
     source macOS/settings.sh
 fi
 
-mkdir ~/.vim/bundle
-git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
-
 echo "configuring zsh as default shell"
 chsh -s $(which zsh)

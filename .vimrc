@@ -1,8 +1,4 @@
-" load plugins from vundle
-source ~/.vim/plugins.vim
-
 color smyck
-
 syntax on
 set tabstop=2
 set number

@@ -2,6 +2,7 @@ alias ll="ls -lF --color"
 alias ga='git add .'
 alias gc='git commit'
 alias gp='git push'
+
 export EDITOR='vim'
 export PROMPT='%F{green}%~ %F{green}❯ %f'
 
@@ -10,9 +11,10 @@ HISTSIZE=10000
 SAVEHIST=10000
 bindkey '^R' history-incremental-pattern-search-backward
 
-autoload -U compinit
+autoload -Uz compinit
 compinit
-zstyle ':completion:*' menu select=1 _complete _ignored _approximate
+zstyle ':completion:*' menu select=1
+setopt COMPLETE_ALIASES
 
 if [[ -a ~/.localrc ]]; then
     source ~/.localrc

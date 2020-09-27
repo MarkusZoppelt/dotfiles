@@ -15,6 +15,9 @@ Icon
 
 # project-specific vim configurations
 .vimrc.local
+.vim/.netrwhist
+.vim/spell/
+.vim/colors/
 
 #Redis
 dump.rdb

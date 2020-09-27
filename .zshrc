@@ -1,4 +1,5 @@
 alias ll="ls -lF --color"
+alias g='git status'
 alias ga='git add .'
 alias gc='git commit'
 alias gp='git push'

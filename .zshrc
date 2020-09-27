@@ -1,3 +1,4 @@
+alias ls='ls --color'
 alias ll="ls -lF --color"
 alias g='git status'
 alias ga='git add .'
@@ -6,6 +7,8 @@ alias gp='git push'
 
 export EDITOR='vim'
 export PROMPT='%F{green}%~ %F{green}❯ %f'
+
+setopt NO_LIST_BEEP
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

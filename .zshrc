@@ -20,6 +20,4 @@ compinit
 zstyle ':completion:*' menu select=1
 setopt COMPLETE_ALIASES
 
-if [[ -a ~/.localrc ]]; then
-    source ~/.localrc
-fi
+[ -f ~/.localrc ] && source ~/.localrc

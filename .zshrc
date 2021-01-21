@@ -8,7 +8,7 @@ alias gp='git push'
 export EDITOR='vim'
 export PROMPT='%F{green}%~ %F{green}❯ %f'
 
-setopt NO_LIST_BEEP
+unsetopt BEEP
 
 HISTFILE=~/.zsh_history
 HISTSIZE=10000

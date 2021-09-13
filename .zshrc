@@ -4,7 +4,6 @@ alias g='git status'
 alias ga='git add .'
 alias gc='git commit'
 alias gp='git push'
-alias git=hub
 
 export EDITOR='vim'
 export PROMPT='%F{green}%~ %F{green}❯ %f'
@@ -21,8 +20,6 @@ compinit
 zstyle ':completion:*' menu select=1
 setopt COMPLETE_ALIASES
 
-source ~/.cargo/env
-export PATH="$HOME/.cargo/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 [ -f ~/.localrc ] && source ~/.localrc

@@ -6,7 +6,7 @@ alias gc='git commit'
 alias gp='git push'
 
 export EDITOR='vim'
-export PROMPT='%F{green}%~ %F{green}❯ %f'
+export PROMPT='%F{green}%~ %F{green}> %f'
 
 unsetopt BEEP
 
@@ -21,5 +21,8 @@ zstyle ':completion:*' menu select=1
 setopt COMPLETE_ALIASES
 
 export PATH="$HOME/.local/bin:$PATH"
+
+# git signing needs this
+export GPG_TTY=$(tty)
 
 [ -f ~/.localrc ] && source ~/.localrc

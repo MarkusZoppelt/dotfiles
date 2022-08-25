@@ -20,8 +20,6 @@ compinit
 zstyle ':completion:*' menu select=1
 setopt COMPLETE_ALIASES
 
-export PATH="$HOME/.local/bin:$PATH"
-
 # git signing needs this
 export GPG_TTY=$(tty)
 

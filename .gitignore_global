@@ -19,5 +19,8 @@ Icon
 .vim/spell/
 .vim/colors/
 
+# project-specific vscode configurations
+.vscode/
+
 #Redis
 dump.rdb

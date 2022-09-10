@@ -1,5 +1,5 @@
 call plug#begin()
-Plug 'Mofiqul/vscode.nvim'
+Plug 'tomasiser/vim-code-dark'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
@@ -11,16 +11,10 @@ call plug#end()
 
 
 " General vim config
-syntax on
-set tabstop=4
-set number
-set backspace=indent,eol,start
-set ai
-set hlsearch
-set ruler
-set linebreak
-set vb t_vb=""
-set clipboard=unnamedplus
+source ~/.vimrc
+set t_Co=256
+set t_ut=
+colorscheme codedark
 
 " Telescope
 nnoremap <leader>ff <cmd>lua require('telescope.builtin').find_files()<cr>
@@ -34,9 +28,6 @@ autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()
 set completeopt=menu,menuone,noselect
 
 lua <<EOF
-
--- VS Code theme
-require('vscode').change_style('dark')
 
 -- Go Setup
 require 'go'.setup()

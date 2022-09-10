@@ -1,5 +1,6 @@
 call plug#begin()
 Plug 'tomasiser/vim-code-dark'
+Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'
 Plug 'kyazdani42/nvim-tree.lua'
 Plug 'neovim/nvim-lspconfig'
@@ -24,11 +25,16 @@ set t_Co=256
 set t_ut=
 colorscheme codedark
 set completeopt=menu,menuone,noselect
+set ignorecase
+set smartcase
 
 " Load Lua scripts
 lua require('lang.go')
 lua require('lang.rust')
 lua require("nvim-tree").setup()
+lua require('lspconfig').pyright.setup{}
+lua require('lualine').setup()
+
 
 " Format Go code when saving
 autocmd BufWritePre *.go :silent! lua require('go.format').gofmt()

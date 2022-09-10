@@ -1,4 +1,5 @@
 syntax on
+let mapleader = ","
 set background=dark
 set tabstop=4
 set number

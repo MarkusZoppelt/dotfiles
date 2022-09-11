@@ -1,4 +1,5 @@
 call plug#begin()
+Plug 'github/copilot.vim'
 Plug 'tomasiser/vim-code-dark'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'kyazdani42/nvim-web-devicons'

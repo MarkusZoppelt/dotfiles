@@ -2,6 +2,12 @@
 
     git clone https://github.com/MarkusZoppelt/dotfiles.git ~/.dotfiles
 
+
+Install everything with `brew`:
+
+    brew bundle --file ~/.dotfiles/Brewfile
+
+
 Create symlinks:
 
     ln -s ~/.dotfiles/.zshrc ~/.zshrc

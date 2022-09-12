@@ -24,6 +24,7 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/vim-vsnip'
 Plug 'simrat39/rust-tools.nvim'
+Plug 'jamessan/vim-gnupg'
 call plug#end()
 
 " General vim config

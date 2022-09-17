@@ -10,10 +10,9 @@ Install everything with `brew`:
 
 Create symlinks:
 
-    ln -s ~/.dotfiles/.zshrc ~/.zshrc
-    ln -s ~/.dotfiles/.vimrc ~/.vimrc
-    ln -s ~/.dotfiles/.tmux.conf ~/.tmux.conf
-    ln -s ~/.dotfiles/.gitconfig ~/.gitconfig
-    ln -s ~/.dotfiles/.gitignore_global ~/.gitignore_global
-    ln -s ~/.dotfiles/nvim ~/.config/nvim
-
+    ln -nsf ~/.dotfiles/.zshrc ~/.zshrc
+    ln -nsf ~/.dotfiles/.vimrc ~/.vimrc
+    ln -nsf ~/.dotfiles/.tmux.conf ~/.tmux.conf
+    ln -nsf ~/.dotfiles/.gitconfig ~/.gitconfig
+    ln -nsf ~/.dotfiles/.gitignore_global ~/.gitignore_global
+    ln -nsf ~/.dotfiles/nvim ~/.config/nvim

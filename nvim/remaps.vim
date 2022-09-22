@@ -1,6 +1,3 @@
-" NvimTree
-nnoremap <leader>nt :NvimTreeToggle<cr>
-
 " For VS code like terminal split
 nnoremap <leader>t :botright 20sp term:///bin/zsh<CR>i
 tnoremap <Esc> <C-\><C-n>

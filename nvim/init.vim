@@ -7,10 +7,8 @@ endif
 
 call plug#begin()
 Plug 'github/copilot.vim'
-Plug 'tomasiser/vim-code-dark'
+Plug 'gruvbox-community/gruvbox'
 Plug 'nvim-lualine/lualine.nvim'
-Plug 'kyazdani42/nvim-web-devicons'
-Plug 'kyazdani42/nvim-tree.lua'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim', { 'branch': '0.1.x' }
@@ -29,16 +27,16 @@ call plug#end()
 
 " General vim config
 source $HOME/.vimrc
-colorscheme codedark
+colorscheme gruvbox
 
 " Language specific requires
 lua require('lspconfig').pyright.setup{}
 lua require('lang.go')
 lua require('lang.rust')
 autocmd BufWritePre *.go :silent! lua require("go.format").gofmt()
+let g:rustfmt_autosave = 1
 
 " Load Lua scripts
-lua require("nvim-tree").setup()
 lua require('lualine').setup()
 
 " Load remaps

@@ -34,7 +34,9 @@ lua require('lspconfig').pyright.setup{}
 lua require('lang.go')
 lua require('lang.rust')
 autocmd BufWritePre *.go :silent! lua require("go.format").gofmt()
+let g:rustfmt_command = "rustfmt"
 let g:rustfmt_autosave = 1
+let g:rustfmt_emit_files = 1
 
 " Load Lua scripts
 lua require('lualine').setup()

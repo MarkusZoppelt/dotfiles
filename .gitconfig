@@ -7,7 +7,7 @@
 	smudge = git-media-smudge %f
 [core]
 	excludesfile = ~/.gitignore_global
-	editor = vim
+	editor = nvim
 	quotepath = false
 [push]
 	default = simple

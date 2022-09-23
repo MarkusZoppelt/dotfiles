@@ -16,3 +16,4 @@ Create symlinks:
     ln -nsf ~/.dotfiles/.gitconfig ~/.gitconfig
     ln -nsf ~/.dotfiles/.gitignore_global ~/.gitignore_global
     ln -nsf ~/.dotfiles/nvim ~/.config/nvim
+    ln -nsf ~/.dotfiles/alacritty ~/.config/alacritty

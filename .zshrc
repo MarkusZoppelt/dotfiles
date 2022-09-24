@@ -5,9 +5,10 @@ alias ga='git add .'
 alias gc='git commit'
 alias gp='git push'
 
-export EDITOR='vim'
+export EDITOR='nvim'
 export PROMPT='%F{green}%~ %F{green}> %f'
 
+setopt autocd
 unsetopt BEEP
 
 HISTFILE=~/.zsh_history

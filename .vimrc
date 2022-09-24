@@ -1,7 +1,7 @@
 syntax on
 filetype plugin indent on
 let mapleader = ","
-set background=dark
+"set background=dark
 set tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 set number
 set backspace=indent,eol,start

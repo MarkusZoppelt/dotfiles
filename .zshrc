@@ -1,5 +1,5 @@
-alias ls='ls --color'
-alias ll="ls -lF --color"
+alias ls=exa
+alias ll="exa -l"
 alias g='git status'
 alias ga='git add .'
 alias gc='git commit'

@@ -1,15 +1,6 @@
 window:
+  decorations: None
   opacity: 0.98
-  padding:
-    y: 35
-  decorations: transparent
 
 font:
   size: 18.0
-
-  normal:
-    family: "MesloLGS Nerd Font Mono"
-    style: Regular
-
-# Need this for |{}, etc. on Mac kb
-alt_send_esc: false

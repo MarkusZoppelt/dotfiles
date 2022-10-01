@@ -6,6 +6,7 @@ window:
 
 font:
   size: 18.0
+  use_thin_strokes: true
 
   normal:
     family: "MesloLGS Nerd Font Mono"

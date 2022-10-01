@@ -8,7 +8,6 @@ endif
 call plug#begin()
 Plug 'github/copilot.vim'
 Plug 'gruvbox-community/gruvbox'
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
@@ -29,7 +28,6 @@ call plug#end()
 " General vim config
 source $HOME/.vimrc
 colorscheme gruvbox
-"colorscheme tokyonight
 
 "transparent background
 hi Normal guibg=NONE ctermbg=NONE
@@ -43,12 +41,8 @@ let g:rustfmt_command = "rustfmt"
 let g:rustfmt_autosave = 1
 let g:rustfmt_emit_files = 1
 
-" Load Lua scripts
 lua require('lualine').setup()
+lua require('copilot')
 
 " Load remaps
 source $HOME/.config/nvim/remaps.vim
-
-" copilot config
-lua vim.g.copilot_no_tab_map = true
-lua vim.api.nvim_set_keymap("i", "<C-j>", 'copilot#Accept("<CR>")', { silent = true, expr = true })

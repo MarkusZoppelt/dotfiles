@@ -12,6 +12,6 @@
 [push]
 	default = simple
 [commit]
-	gpgsign = false
+	gpgsign = true
 [pull]
 	rebase = false

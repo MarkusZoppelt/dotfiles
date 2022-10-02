@@ -29,7 +29,8 @@ call plug#end()
 " General vim config
 source $HOME/.vimrc
 "colorscheme gruvbox
-colorscheme tokyonight-night
+lua require('tokyonight').setup({transparent = true})
+lua vim.cmd[[colorscheme tokyonight-night]]
 
 "transparent background
 hi Normal guibg=NONE ctermbg=NONE

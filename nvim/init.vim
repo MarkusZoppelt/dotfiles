@@ -29,7 +29,7 @@ call plug#end()
 " General vim config
 source $HOME/.vimrc
 "colorscheme gruvbox
-colorscheme tokyonight
+colorscheme tokyonight-night
 
 "transparent background
 hi Normal guibg=NONE ctermbg=NONE

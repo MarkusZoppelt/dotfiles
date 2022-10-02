@@ -8,6 +8,7 @@ endif
 call plug#begin()
 Plug 'github/copilot.vim'
 Plug 'gruvbox-community/gruvbox'
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
@@ -27,7 +28,8 @@ call plug#end()
 
 " General vim config
 source $HOME/.vimrc
-colorscheme gruvbox
+"colorscheme gruvbox
+colorscheme tokyonight
 
 "transparent background
 hi Normal guibg=NONE ctermbg=NONE

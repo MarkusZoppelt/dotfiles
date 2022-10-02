@@ -40,3 +40,7 @@ cmp.setup({
         {name = 'buffer'}
     }
 })
+
+vim.g.rustfmt_command = "rustfmt"
+vim.g.rustfmt_autosave = 1
+vim.g.rustfmt_emit_files = 1

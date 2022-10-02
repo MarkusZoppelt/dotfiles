@@ -46,6 +46,7 @@ let g:rustfmt_emit_files = 1
 
 lua require('lualine').setup()
 lua require('copilot')
+lua require('treesitter')
 
 " Load remaps
 source $HOME/.config/nvim/remaps.vim

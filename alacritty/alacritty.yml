@@ -1,10 +1,16 @@
 window:
-  decorations: None
   opacity: 0.98
 
 font:
   size: 18.0
   use_thin_strokes: true
+
+  normal:
+    family: "MesloLGS Nerd Font Mono"
+    style: Regular
+
+# Need this for |{}, etc. on Mac kb
+alt_send_esc: false
 
 # TokyoNight Alacritty Colors
 colors:

@@ -2,7 +2,7 @@ window:
   opacity: 0.98
 
 font:
-  size: 18.0
+  size: 16.0
   use_thin_strokes: true
 
   normal:

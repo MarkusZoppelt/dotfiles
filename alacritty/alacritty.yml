@@ -7,7 +7,6 @@ font:
 
   normal:
     family: "MesloLGS Nerd Font Mono"
-    style: Regular
 
 # Need this for |{}, etc. on Mac kb
 alt_send_esc: false

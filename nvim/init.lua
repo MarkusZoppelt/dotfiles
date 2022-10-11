@@ -3,6 +3,8 @@ vim.call('plug#begin')
 Plug 'github/copilot.vim'
 Plug 'gruvbox-community/gruvbox'
 Plug('folke/tokyonight.nvim', {branch = 'main'})
+Plug 'nvim-tree/nvim-web-devicons'
+Plug 'kyazdani42/nvim-tree.lua'
 Plug 'nvim-lualine/lualine.nvim'
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
@@ -20,6 +22,8 @@ Plug 'simrat39/rust-tools.nvim'
 Plug 'jamessan/vim-gnupg'
 vim.call('plug#end')
 
+vim.g.loaded = 1
+vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader = ","
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -36,6 +40,7 @@ vim.opt.linebreak = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.completeopt = "menu,menuone,noselect"
 
+require("nvim-tree").setup()
 require('tokyonight').setup({transparent = true})
 require('lspconfig').pyright.setup{}
 require('lualine').setup()
@@ -48,6 +53,7 @@ require('remaps')
 vim.cmd [[
   hi Normal guibg=NONE ctermbg=NONE
   colorscheme tokyonight-night
+  highlight NvimTreeNormal guibg=None
   syntax on
   set vb t_vb=""
   set nohlsearch

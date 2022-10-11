@@ -1,3 +1,5 @@
+vim.keymap.set('n', '<leader>nt', ':NvimTreeToggle<CR>')
+
 -- Code navigation shortcuts
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions

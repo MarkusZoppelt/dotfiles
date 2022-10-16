@@ -10,7 +10,7 @@
 	editor = nvim
 	quotepath = false
 [push]
-	default = simple
+	default = current
 [commit]
 	gpgsign = true
 [pull]

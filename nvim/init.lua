@@ -43,6 +43,8 @@ vim.opt.completeopt = "menu,menuone,noselect"
 require("nvim-tree").setup()
 require('tokyonight').setup({transparent = true})
 require('lspconfig').pyright.setup{}
+require('lspconfig').gopls.setup{}
+require('lspconfig').rust_analyzer.setup{}
 require('lualine').setup()
 require('lang.go')
 require('lang.rust')

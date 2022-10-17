@@ -39,4 +39,5 @@ setopt COMPLETE_ALIASES
 # git signing needs this
 export GPG_TTY=$(tty)
 
+[ -f ~/.dotfiles/work.zshrc ] && source ~/.dotfiles/work.zshrc
 [ -f ~/.localrc ] && source ~/.localrc

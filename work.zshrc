@@ -4,7 +4,7 @@ export PATH=$PATH:~/.local/bin
 export PATH=$PATH:~/cifuzz/bin                                              #|
 export CIFUZZ_INSTALL_ROOT=~/cifuzz                                         #|
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh   #|
-fpath=(/Users/mz/cifuzz/share/cifuzz/zsh/completions $fpath)                #|
+fpath=(~/cifuzz/share/cifuzz/zsh/completions $fpath)                        #|
 autoload -U compinit; compinit                                              #|
 # ============================================================================
 

@@ -27,8 +27,8 @@ setopt prompt_subst
 unsetopt BEEP
 
 HISTFILE=~/.zsh_history
-HISTSIZE=10000
-SAVEHIST=10000
+HISTSIZE=999999
+SAVEHIST=999999
 bindkey '^R' history-incremental-pattern-search-backward
 
 autoload -Uz compinit

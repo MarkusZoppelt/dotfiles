@@ -1,5 +1,3 @@
-vim.keymap.set('n', '<leader>nt', ':NvimTreeToggle<CR>')
-
 -- Code navigation shortcuts
 -- Mappings.
 -- See `:help vim.diagnostic.*` for documentation on any of the below functions
@@ -37,6 +35,7 @@ end
 
 vim.keymap.set('n', 'ca', vim.lsp.buf.code_action, bufopts)
 vim.keymap.set('n', 'fF', function() vim.lsp.buf.format { async = true } end, bufopts)
+vim.keymap.set('n', 'gd', vim.lsp.buf.definition, bufopts)
 
 -- Telescope
 local builtin = require('telescope.builtin')

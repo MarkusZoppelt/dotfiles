@@ -1,6 +1,7 @@
 export PATH=$PATH:~/.local/bin
 
 # Setup cifuzz ##############################################################|
+export CIFUZZ_DEVELOPMENT=1
 export PATH=$PATH:~/cifuzz/bin                                              #|
 export CIFUZZ_INSTALL_ROOT=~/cifuzz                                         #|
 source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh   #|

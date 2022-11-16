@@ -13,6 +13,8 @@ alias vim=nvim
 
 export EDITOR='nvim'
 
+autoload -U compinit
+
 # Enabling and setting git info var to be used in prompt config.
 autoload -Uz vcs_info
 zstyle ':vcs_info:*' enable git
@@ -31,8 +33,6 @@ HISTSIZE=999999
 SAVEHIST=999999
 bindkey '^R' history-incremental-pattern-search-backward
 
-autoload -Uz compinit
-compinit
 zstyle ':completion:*' menu select=1
 setopt COMPLETE_ALIASES
 
@@ -41,3 +41,5 @@ export GPG_TTY=$(tty)
 
 [ -f ~/.dotfiles/work.zshrc ] && source ~/.dotfiles/work.zshrc
 [ -f ~/.localrc ] && source ~/.localrc
+
+compinit

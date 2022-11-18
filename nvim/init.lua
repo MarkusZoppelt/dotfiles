@@ -22,6 +22,9 @@ Plug 'simrat39/rust-tools.nvim'
 Plug 'jamessan/vim-gnupg'
 vim.call('plug#end')
 
+-- set term color 256
+vim.o.termguicolors = true
+
 -- vim.g.loaded = 1
 -- vim.g.loaded_netrwPlugin = 1
 vim.g.mapleader = ","
@@ -56,8 +59,6 @@ require('remaps')
 vim.cmd [[
   hi Normal guibg=NONE ctermbg=NONE
   colorscheme tokyonight-night
-  highlight NvimTreeNormal guibg=None
-  syntax on
   set vb t_vb=""
   set nohlsearch
 ]]

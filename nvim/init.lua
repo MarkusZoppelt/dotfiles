@@ -10,6 +10,7 @@ Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
 Plug('nvim-telescope/telescope.nvim', { branch = '0.1.x' })
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
+Plug 'nvim-treesitter/nvim-treesitter-context'
 Plug 'ray-x/go.nvim'
 Plug 'ray-x/guihua.lua'
 Plug 'hrsh7th/nvim-cmp'
@@ -53,6 +54,7 @@ require('lspconfig').rust_analyzer.setup{}
 require('lang.go')
 require('lang.rust')
 require('treesitter')
+require('treesitter-context').setup()
 require('copilot')
 require('remaps')
 
@@ -61,4 +63,5 @@ vim.cmd [[
   colorscheme tokyonight-night
   set vb t_vb=""
   set nohlsearch
+  TSContextEnable
 ]]

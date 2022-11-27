@@ -41,6 +41,9 @@ cmp.setup({
     }
 })
 
+vim.keymap.set('n', 'K', '<cmd>RustHoverActions<CR>', {noremap = true})
+vim.keymap.set('n', 'ca', '<cmd>RustCodeAction<CR>', {noremap = true})
+
 vim.g.rustfmt_command = "rustfmt"
 vim.g.rustfmt_autosave = 1
 vim.g.rustfmt_emit_files = 1

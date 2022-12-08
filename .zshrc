@@ -59,6 +59,8 @@ if [ "$(uname)" = "Darwin" ]; then                                          #|
     export PATH="/opt/homebrew/opt/llvm/bin:$PATH"                          #|
     export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"                           #|
     export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"                      #|
+    export CC=/opt/homebrew/opt/llvm/bin/clang                              #|
+    export CXX=/opt/homebrew/opt/llvm/bin/clang++                           #|
 fi                                                                          #|
 # ============================================================================
 

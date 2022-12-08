@@ -1,27 +1,5 @@
-local Plug = vim.fn['plug#']
-vim.call('plug#begin')
-Plug 'github/copilot.vim'
-Plug('folke/tokyonight.nvim', {branch = 'main'})
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/plenary.nvim'
-Plug('nvim-telescope/telescope.nvim', { branch = '0.1.x' })
-Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
-Plug 'nvim-treesitter/nvim-treesitter-context'
-Plug 'ray-x/go.nvim'
-Plug 'ray-x/guihua.lua'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-vsnip'
-Plug 'hrsh7th/cmp-path'
-Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'simrat39/rust-tools.nvim'
-Plug 'jamessan/vim-gnupg'
-vim.call('plug#end')
-
 -- set term color 256
 vim.o.termguicolors = true
-
 vim.g.mapleader = ","
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
@@ -39,6 +17,7 @@ vim.opt.linebreak = true
 vim.opt.clipboard = "unnamedplus"
 vim.opt.completeopt = "menu,menuone,noselect"
 
+require('plugins')
 require('tokyonight').setup({transparent = true})
 require('lspconfig').clangd.setup{}
 require('lspconfig').gopls.setup{}

@@ -21,8 +21,6 @@ zstyle ':completion:*' menu select=1                                        #|
 setopt COMPLETE_ALIASES                                                     #|
 setopt autocd                                                               #|
 unsetopt BEEP                                                               #|
-# git signing needs this                                                    #|
-export GPG_TTY=$(tty)                                                       #|
                                                                             #|
 # Setup go if it's installed                                                #|
 if [ -d "$HOME/go/bin" ] ; then                                             #|

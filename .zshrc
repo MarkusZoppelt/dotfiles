@@ -115,4 +115,10 @@ fpath=($HOME/.local/share/zsh/completions $fpath)                           #|
 export USE_BAZEL_VERSION=6.0.0-pre.20221020.1                               #|
 # ============================================================================
 
+# Setup YubiKey Agent #######################################################|
+if [ "$(uname)" = "Darwin" ]; then                                          #|
+    export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock"      #|
+fi                                                                          #|
+# ============================================================================
+
 compinit

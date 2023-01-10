@@ -45,6 +45,7 @@ require('lspconfig').gopls.setup{}
 require('lspconfig').rust_analyzer.setup{}
 require('lang.go')
 require('lang.rust')
+require('lang.typescript')
 require('treesitter')
 require('treesitter-context').setup()
 require('copilot')

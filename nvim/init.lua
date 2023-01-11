@@ -57,6 +57,17 @@ vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {b
 vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {border = 'rounded'})
 vim.diagnostic.config{ float= {border='rounded'} }
 
+-- don't underline diagnostic errors
+-- e.g. gopls will underline the entire file
+-- if package names contain underscores
+vim.lsp.handlers["textDocument/publishDiagnostics"] =
+  vim.lsp.with(
+  vim.lsp.diagnostic.on_publish_diagnostics,
+  {
+    underline = false
+  }
+)
+
 vim.cmd [[
   hi Normal guibg=NONE ctermbg=NONE
   colorscheme tokyonight-night

@@ -6,9 +6,6 @@ alias g='git status'                                                        #|
 alias ga='git add .'                                                        #|
 alias gc='git commit'                                                       #|
 alias gp='git push'                                                         #|
-alias grep=rg                                                               #|
-alias find=fd                                                               #|
-alias sed=sd                                                                #|
 alias vim=nvim                                                              #|
 alias lg=lazygit                                                            #|
 # ============================================================================
@@ -57,8 +54,6 @@ if [ "$(uname)" = "Darwin" ]; then                                          #|
     export PATH="/opt/homebrew/opt/llvm/bin:$PATH"                          #|
     export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"                           #|
     export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"                      #|
-    export CC=/opt/homebrew/opt/llvm/bin/clang                              #|
-    export CXX=/opt/homebrew/opt/llvm/bin/clang++                           #|
 fi                                                                          #|
 # ============================================================================
 
@@ -105,7 +100,6 @@ fi                                                                          #|
 # ============================================================================
 
 # Setup cifuzz ##############################################################|
-export CIFUZZ_DEVELOPMENT=1                                                 #|
 if [ "$(uname)" = "Darwin" ]; then                                          #|
     source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi                                                                          #|

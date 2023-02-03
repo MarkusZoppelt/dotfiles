@@ -68,10 +68,6 @@ function lazy_nvm {                                                         #|
   if [ -d "${HOME}/.nvm" ]; then                                            #|
     export NVM_DIR="$HOME/.nvm"                                             #|
     [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"                         #|
-    if [ "$(uname)" = "Darwin" ]; then                                      #|
-        [ -s "$(brew --prefix nvm)/nvm.sh" ] &&                             #|
-            source $(brew --prefix nvm)/nvm.sh                              #|
-    fi                                                                      #|
   fi                                                                        #|
 }                                                                           #|
 # aliases                                                                   #|

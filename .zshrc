@@ -96,6 +96,12 @@ if [ "$(uname)" = "Darwin" ]; then                                          #|
 fi                                                                          #|
 # ============================================================================
 
+# if zoxide is installed, use it for cd
+if [ -x "$(command -v zoxide)" ]; then
+    eval "$(zoxide init zsh)"
+    alias cd='z'
+fi
+
 compinit
 
 eval "$(starship init zsh)"

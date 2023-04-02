@@ -30,18 +30,6 @@ if [ -d "$HOME/.local/bin" ] ; then                                         #|
 fi                                                                          #|
 # ============================================================================
 
-# Prompt ####################################################################|
-# Enabling and setting git info var to be used in prompt config.            #|
-autoload -Uz vcs_info                                                       #|
-zstyle ':vcs_info:*' enable git                                             #|
-zstyle ':vcs_info:git*' formats "(%b)"                                      #|
-precmd() { vcs_info }                                                       #|
-                                                                            #|
-NEWLINE=$'\n'                                                               #|
-PS1='%F{blue}%n@%m %F{green}%~ %F{yellow}${vcs_info_msg_0_} ${NEWLINE}%F{green}> %f'
-setopt prompt_subst                                                         #|
-# ============================================================================
-
 # History ###################################################################|
 HISTFILE=$HOME/.zsh_history                                                 #|
 HISTSIZE=999999999                                                          #|
@@ -109,3 +97,5 @@ fi                                                                          #|
 # ============================================================================
 
 compinit
+
+eval "$(starship init zsh)"

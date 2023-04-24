@@ -7,6 +7,15 @@ vim.keymap.set('n', '[d', vim.diagnostic.goto_prev, opts)
 vim.keymap.set('n', ']d', vim.diagnostic.goto_next, opts)
 vim.keymap.set('n', '<space>q', vim.diagnostic.setloclist, opts)
 
+-- Harpoon
+vim.keymap.set('n', '<space>m', function() require('harpoon.mark').add_file() end, opts)
+vim.keymap.set('n', '<space>h', function() require('harpoon.ui').toggle_quick_menu() end, opts)
+vim.keymap.set('n', '<space>1', function() require('harpoon.ui').nav_file(1) end, opts)
+vim.keymap.set('n', '<space>2', function() require('harpoon.ui').nav_file(2) end, opts)
+vim.keymap.set('n', '<space>3', function() require('harpoon.ui').nav_file(3) end, opts)
+vim.keymap.set('n', '<space>4', function() require('harpoon.ui').nav_file(4) end, opts)
+vim.keymap.set('n', '<space>5', function() require('harpoon.ui').nav_file(5) end, opts)
+
 -- Use an on_attach function to only map the following keys
 -- after the language server attaches to the current buffer
 local on_attach = function(client, bufnr)

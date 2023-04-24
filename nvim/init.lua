@@ -4,6 +4,7 @@ Plug 'github/copilot.vim'
 Plug('folke/tokyonight.nvim', {branch = 'main'})
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/plenary.nvim'
+Plug 'ThePrimeagen/harpoon'
 Plug('nvim-telescope/telescope.nvim', { branch = '0.1.x' })
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 Plug 'nvim-treesitter/nvim-treesitter-context'

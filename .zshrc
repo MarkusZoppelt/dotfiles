@@ -96,11 +96,18 @@ if [ "$(uname)" = "Darwin" ]; then                                          #|
 fi                                                                          #|
 # ============================================================================
 
-# if zoxide is installed, use it for cd
-if [ -x "$(command -v zoxide)" ]; then
-    eval "$(zoxide init zsh)"
-    alias cd='z'
-fi
+# if zoxide is installed, use it for cd #####################################|
+if [ -x "$(command -v zoxide)" ]; then                                      #|
+    eval "$(zoxide init zsh)"                                               #|
+    alias cd='z'                                                            #|
+fi                                                                          #|
+# ============================================================================
+
+# if babashka is installed, use it for clojure ##############################|
+if [ -d "$HOME/.babashka/bbin/bin" ] ; then                                 #|
+    export PATH="$PATH:$HOME/.babashka/bbin/bin"                            #|
+fi                                                                          #|
+# ============================================================================
 
 compinit
 

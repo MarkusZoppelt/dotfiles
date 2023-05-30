@@ -32,8 +32,8 @@ fi                                                                          #|
 
 # History ###################################################################|
 HISTFILE=$HOME/.zsh_history                                                 #|
-HISTSIZE=999999999                                                          #|
-SAVEHIST=999999999                                                          #|
+HISTSIZE=9999999                                                            #|
+SAVEHIST=9999999                                                            #|
 bindkey '^R' history-incremental-pattern-search-backward                    #|
 # ============================================================================
 

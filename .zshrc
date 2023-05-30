@@ -24,7 +24,6 @@ if [ -d "$HOME/go/bin" ] ; then                                             #|
     export PATH="$PATH:$HOME/go/bin"                                        #|
 fi                                                                          #|
                                                                             #|
-                                                                            #|
 if [ -d "$HOME/.local/bin" ] ; then                                         #|
     export PATH="$PATH:$HOME/.local/bin"                                    #|
 fi                                                                          #|
@@ -43,6 +42,10 @@ if [ "$(uname)" = "Darwin" ]; then                                          #|
     export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"                           #|
     export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"                      #|
 fi                                                                          #|
+# ============================================================================
+
+# Setup default JAVA_HOME (for dev) #########################################|
+export JAVA_HOME=/opt/homebrew/opt/openjdk@17                               #|
 # ============================================================================
 
 # Setup NVM / Node ##########################################################|

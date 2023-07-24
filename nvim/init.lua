@@ -38,7 +38,6 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 vim.opt.linebreak = true
 vim.opt.linebreak = true
-vim.opt.clipboard = "unnamedplus"
 vim.opt.completeopt = "menu,menuone,noselect"
 
 require('tokyonight').setup({transparent = true})

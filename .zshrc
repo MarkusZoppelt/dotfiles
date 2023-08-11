@@ -12,14 +12,12 @@ alias lg=lazygit                                                            #|
 
 # General settings ##########################################################|
 export EDITOR='nvim'                                                        #|
-                                                                            #|
 autoload -U compinit                                                        #|
 zstyle ':completion:*' menu select=1                                        #|
 setopt COMPLETE_ALIASES                                                     #|
 setopt autocd                                                               #|
 unsetopt BEEP                                                               #|
                                                                             #|
-# Setup go if it's installed                                                #|
 if [ -d "$HOME/go/bin" ] ; then                                             #|
     export PATH="$PATH:$HOME/go/bin"                                        #|
 fi                                                                          #|
@@ -71,7 +69,7 @@ if [ "$(uname)" = "Linux" ]; then                                           #|
 fi                                                                          #|
 # ============================================================================
 
-# Setup cifuzz ##############################################################|
+# Setup completions & autosuggestions #######################################|
 if [ "$(uname)" = "Darwin" ]; then                                          #|
     source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fi                                                                          #|

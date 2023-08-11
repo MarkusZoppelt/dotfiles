@@ -8,15 +8,14 @@ Plug 'ThePrimeagen/harpoon'
 Plug('nvim-telescope/telescope.nvim', { branch = '0.1.x' })
 Plug('nvim-treesitter/nvim-treesitter', {['do'] = ':TSUpdate'})
 Plug 'nvim-treesitter/nvim-treesitter-context'
-Plug 'ray-x/go.nvim'
-Plug 'ray-x/guihua.lua'
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'hrsh7th/cmp-vsnip'
 Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-buffer'
-Plug 'hrsh7th/vim-vsnip'
-Plug 'simrat39/rust-tools.nvim'
+Plug 'williamboman/mason.nvim'
+Plug 'williamboman/mason-lspconfig.nvim'
+Plug 'L3MON4D3/LuaSnip'
+Plug ('VonHeikemen/lsp-zero.nvim', {branch = 'v2.x'})
 Plug 'tpope/vim-fugitive'
 vim.call('plug#end')
 
@@ -41,33 +40,11 @@ vim.opt.linebreak = true
 vim.opt.completeopt = "menu,menuone,noselect"
 
 require('tokyonight').setup({transparent = true})
-require('lspconfig').clangd.setup{}
-require('lspconfig').gopls.setup{}
-require('lspconfig').rust_analyzer.setup{}
-require('lang.go')
-require('lang.rust')
-require('lang.typescript')
 require('treesitter')
 require('treesitter-context').setup()
+require('lsp')
 require('copilot')
 require('remaps')
-
--- Rounded borders for floating windows
-require('cmp').setup({ window = { completion = {border = 'rounded'} } })
-vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {border = 'rounded'})
-vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {border = 'rounded'})
-vim.diagnostic.config{ float= {border='rounded'} }
-
--- don't underline diagnostic errors
--- e.g. gopls will underline the entire file
--- if package names contain underscores
-vim.lsp.handlers["textDocument/publishDiagnostics"] =
-  vim.lsp.with(
-  vim.lsp.diagnostic.on_publish_diagnostics,
-  {
-    underline = false
-  }
-)
 
 vim.cmd [[
   hi Normal guibg=NONE ctermbg=NONE

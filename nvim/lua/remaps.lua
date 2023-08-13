@@ -1,4 +1,4 @@
-local opts = { noremap=true, silent=true }
+local opts = { noremap = true, silent = true }
 
 -- Harpoon
 vim.keymap.set('n', '<space>m', function() require('harpoon.mark').add_file() end, opts)

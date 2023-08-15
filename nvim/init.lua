@@ -15,7 +15,6 @@ Plug 'hrsh7th/cmp-buffer'
 Plug 'williamboman/mason.nvim'
 Plug 'williamboman/mason-lspconfig.nvim'
 Plug 'L3MON4D3/LuaSnip'
-Plug('VonHeikemen/lsp-zero.nvim', { branch = 'v2.x' })
 Plug 'tpope/vim-fugitive'
 vim.call('plug#end')
 

@@ -69,5 +69,9 @@ vim.diagnostic.config({
     virtual_text = true
 })
 
+vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+  border = "rounded",
+})
+
 -- Automatically format go on save
 vim.api.nvim_exec([[ autocmd BufWritePre *.go lua vim.lsp.buf.format() ]], false)

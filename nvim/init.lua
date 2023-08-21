@@ -17,7 +17,7 @@ Plug 'tpope/vim-fugitive'
 vim.call('plug#end')
 
 vim.o.termguicolors = true
-vim.g.mapleader = ","
+vim.g.mapleader = " "
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4

@@ -1,23 +1,12 @@
-local Plug = vim.fn['plug#']
-vim.call('plug#begin')
-Plug 'github/copilot.vim'
-Plug('folke/tokyonight.nvim', { branch = 'main' })
-Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/plenary.nvim'
-Plug 'ThePrimeagen/harpoon'
-Plug('nvim-telescope/telescope.nvim', { branch = '0.1.x' })
-Plug('nvim-treesitter/nvim-treesitter', { ['do'] = ':TSUpdate' })
-Plug 'nvim-treesitter/nvim-treesitter-context'
-Plug 'hrsh7th/nvim-cmp'
-Plug 'hrsh7th/cmp-nvim-lsp'
-Plug 'williamboman/mason.nvim'
-Plug 'williamboman/mason-lspconfig.nvim'
-Plug 'L3MON4D3/LuaSnip'
-Plug 'tpope/vim-fugitive'
-vim.call('plug#end')
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+    vim.fn.system({ "git", "clone", "--filter=blob:none", "https://github.com/folke/lazy.nvim.git", "--branch=stable",
+        lazypath, })
+end
+vim.opt.rtp:prepend(lazypath)
 
-vim.o.termguicolors = true
 vim.g.mapleader = " "
+vim.o.termguicolors = true
 vim.opt.tabstop = 4
 vim.opt.softtabstop = 4
 vim.opt.shiftwidth = 4
@@ -36,11 +25,5 @@ vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.visualbell = false
 vim.opt.hlsearch = false
 
-require('tokyonight').setup({ transparent = true, style = 'night' })
-require('treesitter')
-require('treesitter-context').setup({ enable = true })
-require('lsp')
+require("lazy").setup("plugins")
 require('remaps')
-require('copilot')
-
-vim.cmd [[colorscheme tokyonight]]

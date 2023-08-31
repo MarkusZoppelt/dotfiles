@@ -30,8 +30,5 @@ return {
         vim.diagnostic.config({
             virtual_text = true
         })
-
-        -- Automatically format go on save
-        vim.api.nvim_exec([[ autocmd BufWritePre *.go lua vim.lsp.buf.format() ]], false)
     end
 }

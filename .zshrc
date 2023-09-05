@@ -17,6 +17,7 @@ setopt COMPLETE_ALIASES
 setopt autocd
 unsetopt BEEP
 
+bindkey -s ^f "tmux-sessionizer\n"
 
 if [ -d "$HOME/go/bin" ]; then
 	export PATH="$PATH:$HOME/go/bin"

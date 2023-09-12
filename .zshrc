@@ -1,7 +1,6 @@
 # Setup aliases ###############################################################
-alias ls=exa
-alias ll="exa -l"
-alias l="exa -l"
+alias ls="lsd"
+alias ll="lsd -l"
 alias g='git status'
 alias ga='git add .'
 alias gc='git commit'

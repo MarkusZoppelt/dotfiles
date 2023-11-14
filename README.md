@@ -20,3 +20,4 @@ Create symlinks:
     ln -nsf ~/.dotfiles/starship.toml ~/.config/starship.toml
     ln -nsf ~/.dotfiles/alacritty ~/.config/alacritty
     ln -nsf ~/.dotfiles/nvim ~/.config/nvim
+    ln -nsf ~/.dotfiles/.wezterm.lua ~/.wezterm.lua

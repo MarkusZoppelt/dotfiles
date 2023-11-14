@@ -1,6 +1,7 @@
 [user]
 	name = Markus Zoppelt
 	email = markus@zoppelt.net
+	signingkey = /Users/mz/.ssh/yubikey-agent.pub
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
@@ -12,3 +13,5 @@
 	default = current
 [pull]
 	rebase = false
+[gpg]
+	format = ssh

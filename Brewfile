@@ -35,5 +35,5 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 
 cask "alacritty"
-cask "font-meslo-lg-nerd-font"
+cask "font-monaspace"
 cask "spotify"

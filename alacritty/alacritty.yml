@@ -8,7 +8,11 @@ font:
   size: 14.0
 
   normal:
-    family: "MesloLGS Nerd Font Mono"
+    family: "Monaspace Neon"
+
+  italic:
+    family: "Monaspace Radon"
+    style:  "Regular"
 
 # TokyoNight Alacritty Colors
 colors:

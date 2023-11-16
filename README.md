@@ -19,5 +19,5 @@ Create symlinks:
     ln -nsf ~/.dotfiles/.zshrc ~/.zshrc
     ln -nsf ~/.dotfiles/starship.toml ~/.config/starship.toml
     ln -nsf ~/.dotfiles/alacritty ~/.config/alacritty
+    ln -nsf ~/.dotfiles/wezterm ~/.config/wezterm
     ln -nsf ~/.dotfiles/nvim ~/.config/nvim
-    ln -nsf ~/.dotfiles/.wezterm.lua ~/.wezterm.lua

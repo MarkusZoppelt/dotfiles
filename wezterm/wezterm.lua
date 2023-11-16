@@ -5,6 +5,6 @@ local config = {
 
 config.color_scheme = 'Tokyo Night'
 config.font = wezterm.font 'Monaspace Neon'
-config.font_size = 13
+config.font_size = 16
 
 return config

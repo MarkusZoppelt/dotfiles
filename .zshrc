@@ -77,12 +77,13 @@ if [ -x "$(command -v zoxide)" ]; then
 	alias cd='z'
 fi
 
+# Setup Google Cloud SDK ######################################################
+if [ -d "$HOME/.gcloud/sdk" ]; then
+    . "$HOME/.gcloud/sdk/path.zsh.inc"
+    . "$HOME/.gcloud/sdk/completion.zsh.inc"
+fi
+
 compinit
 
 eval "$(starship init zsh)"
 
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/mz/.gcloud/sdk/path.zsh.inc' ]; then . '/Users/mz/.gcloud/sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/mz/.gcloud/sdk/completion.zsh.inc' ]; then . '/Users/mz/.gcloud/sdk/completion.zsh.inc'; fi

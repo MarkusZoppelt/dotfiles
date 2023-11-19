@@ -1,3 +1,7 @@
+if [ -x "$(command -v pkgx)" ]; then
+    source <(pkgx --shellcode)
+fi
+
 # Setup aliases ###############################################################
 alias ls="lsd"
 alias ll="lsd -l"
@@ -86,4 +90,3 @@ fi
 compinit
 
 eval "$(starship init zsh)"
-

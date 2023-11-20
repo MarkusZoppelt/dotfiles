@@ -75,12 +75,6 @@ if [ "$(uname)" = "Darwin" ]; then
 	export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock"
 fi
 
-# if zoxide is installed, use it for cd #######################################
-if [ -x "$(command -v zoxide)" ]; then
-	eval "$(zoxide init zsh)"
-	alias cd='z'
-fi
-
 # Setup Google Cloud SDK ######################################################
 if [ -d "$HOME/.gcloud/sdk" ]; then
     . "$HOME/.gcloud/sdk/path.zsh.inc"

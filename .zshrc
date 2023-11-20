@@ -37,10 +37,10 @@ SAVEHIST=9999999
 bindkey '^R' history-incremental-pattern-search-backward
 
 # Setup LLVM ##################################################################
-if [ "$(uname)" = "Darwin" ]; then
-	export PATH="/opt/homebrew/opt/llvm/bin:$PATH"
-	export LDFLAGS="-L/opt/homebrew/opt/llvm/lib"
-	export CPPFLAGS="-I/opt/homebrew/opt/llvm/include"
+if [ "$(uname)" = "Darwin" ] && [ -d "/opt/homebrew/opt/llvm@16/bin" ]; then
+    export PATH="/opt/homebrew/opt/llvm@16/bin:$PATH"
+    export LDFLAGS="-L/opt/homebrew/opt/llvm@16/lib"
+    export CPPFLAGS="-I/opt/homebrew/opt/llvm@16/include"
 fi
 
 # Setup Node with fnm #########################################################

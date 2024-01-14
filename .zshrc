@@ -1,24 +1,35 @@
-if [ -x "$(command -v pkgx)" ]; then
-    source <(pkgx --shellcode)
+if type pkgx &> /dev/null; then
+  source <(pkgx --shellcode)
 fi
 
-BREW_PREFIX=$(brew --prefix)
+HOMEBREW_PREFIX="$(brew --prefix)"
 
 # Setup aliases ###############################################################
-alias ls="lsd"
-alias ll="lsd -l"
 alias g='git status'
 alias ga='git add .'
 alias gc='git commit'
 alias gp='git push'
-alias vim=nvim
-alias lg=lazygit
+
+if type lsd &> /dev/null; then
+  alias ls="lsd"
+  alias ll="lsd -l"
+fi
+
+if type nvim &> /dev/null; then
+  alias vim=nvim
+  export EDITOR='nvim'
+fi
+
+if type lazygit &> /dev/null; then
+  alias lg=lazygit
+fi
 
 # General settings ############################################################
-export EDITOR='nvim'
-autoload -U compinit
+autoload -Uz compinit
+compinit -C
 zstyle ':completion:*' menu select=1
 setopt COMPLETE_ALIASES
+setopt share_history
 setopt autocd
 unsetopt BEEP
 
@@ -39,8 +50,8 @@ SAVEHIST=9999999
 bindkey '^R' history-incremental-pattern-search-backward
 
 # Setup Node with fnm #########################################################
-if [ -x "$(command -v fnm)" ]; then
-	eval "$(fnm env --use-on-cd)"
+if type fnm &> /dev/null; then
+  eval "$(fnm env --use-on-cd)"
 fi
 
 # Setup fzf ###################################################################
@@ -53,11 +64,11 @@ case $OSTYPE in
 	source "$HOME/.fzf/shell/key-bindings.zsh"
   ;;
   darwin*)
-	if [[ ! "$PATH" == *$BREW_PREFIX/opt/fzf/bin* ]]; then
-		PATH="${PATH:+${PATH}:}$BREW_PREFIX/opt/fzf/bin"
+	if [[ ! "$PATH" == *$HOMEBREW_PREFIX/opt/fzf/bin* ]]; then
+		PATH="${PATH:+${PATH}:}$HOMEBREW_PREFIX/opt/fzf/bin"
 	fi
-	[[ $- == *i* ]] && source "$BREW_PREFIX/opt/fzf/shell/completion.zsh" 2>/dev/null
-	source "$BREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
+	[[ $- == *i* ]] && source "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh" 2>/dev/null
+	source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
   ;;
 esac
 
@@ -67,7 +78,7 @@ case $OSTYPE in
     source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   ;;
   darwin*)
-    source $BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+    source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
   ;;
 esac
 fpath=($HOME/.local/share/zsh/completions $fpath)
@@ -75,7 +86,7 @@ fpath=($HOME/.local/share/zsh/completions $fpath)
 # Setup YubiKey Agent #########################################################
 case $OSTYPE in
   darwin*)
-    export SSH_AUTH_SOCK="$BREW_PREFIX/var/run/yubikey-agent.sock"
+    export SSH_AUTH_SOCK="$HOMEBREW_PREFIX/var/run/yubikey-agent.sock"
   ;;
 esac
 
@@ -85,6 +96,6 @@ if [ -d "$HOME/.gcloud/sdk" ]; then
     . "$HOME/.gcloud/sdk/completion.zsh.inc"
 fi
 
-compinit
-
-eval "$(starship init zsh)"
+if type starship &> /dev/null; then
+  eval "$(starship init zsh)"
+fi

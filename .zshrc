@@ -4,6 +4,10 @@ fi
 
 HOMEBREW_PREFIX="$(brew --prefix)"
 
+if type asdf &> /dev/null; then
+  . $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
+fi
+
 # Setup aliases ###############################################################
 alias g='git status'
 alias ga='git add .'

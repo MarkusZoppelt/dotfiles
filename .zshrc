@@ -2,6 +2,8 @@ if [ -x "$(command -v pkgx)" ]; then
     source <(pkgx --shellcode)
 fi
 
+BREW_PREFIX=$(brew --prefix)
+
 # Setup aliases ###############################################################
 alias ls="lsd"
 alias ll="lsd -l"
@@ -42,31 +44,40 @@ if [ -x "$(command -v fnm)" ]; then
 fi
 
 # Setup fzf ###################################################################
-if [ "$(uname)" = "Darwin" ]; then
-	if [[ ! "$PATH" == *$(brew --prefix)/opt/fzf/bin* ]]; then
-		PATH="${PATH:+${PATH}:}$(brew --prefix)/opt/fzf/bin"
-	fi
-	[[ $- == *i* ]] && source "$(brew --prefix)/opt/fzf/shell/completion.zsh" 2>/dev/null
-	source "$(brew --prefix)/opt/fzf/shell/key-bindings.zsh"
-fi
-if [ "$(uname)" = "Linux" ]; then
+case $OSTYPE in
+  linux*)
 	if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
 		PATH="${PATH:+${PATH}:}$HOME/.fzf/bin"
 	fi
 	[[ $- == *i* ]] && source "$HOME/.fzf/shell/completion.zsh" 2>/dev/null
 	source "$HOME/.fzf/shell/key-bindings.zsh"
-fi
+  ;;
+  darwin*)
+	if [[ ! "$PATH" == *$BREW_PREFIX/opt/fzf/bin* ]]; then
+		PATH="${PATH:+${PATH}:}$BREW_PREFIX/opt/fzf/bin"
+	fi
+	[[ $- == *i* ]] && source "$BREW_PREFIX/opt/fzf/shell/completion.zsh" 2>/dev/null
+	source "$BREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
+  ;;
+esac
 
 # Setup completions & autosuggestions #########################################
-if [ "$(uname)" = "Darwin" ]; then
-	source $(brew --prefix)/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-fi
+case $OSTYPE in
+  linux*)
+    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  ;;
+  darwin*)
+    source $BREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+  ;;
+esac
 fpath=($HOME/.local/share/zsh/completions $fpath)
 
 # Setup YubiKey Agent #########################################################
-if [ "$(uname)" = "Darwin" ]; then
-	export SSH_AUTH_SOCK="$(brew --prefix)/var/run/yubikey-agent.sock"
-fi
+case $OSTYPE in
+  darwin*)
+    export SSH_AUTH_SOCK="$BREW_PREFIX/var/run/yubikey-agent.sock"
+  ;;
+esac
 
 # Setup Google Cloud SDK ######################################################
 if [ -d "$HOME/.gcloud/sdk" ]; then

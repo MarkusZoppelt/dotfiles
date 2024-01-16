@@ -1,9 +1,5 @@
 HOMEBREW_PREFIX="$(brew --prefix)"
 
-if type asdf &> /dev/null; then
-  . $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
-fi
-
 # Setup aliases ###############################################################
 alias g='git status'
 alias ga='git add .'
@@ -89,6 +85,16 @@ case $OSTYPE in
     export SSH_AUTH_SOCK="$HOMEBREW_PREFIX/var/run/yubikey-agent.sock"
   ;;
 esac
+
+# Setup asdf ##################################################################
+if type asdf &> /dev/null; then
+  . $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
+  jh() {
+    if [ -e "$HOME/.asdf/plugins/java/set-java-home.zsh" ]; then
+      . $HOME/.asdf/plugins/java/set-java-home.zsh
+    fi
+  }
+fi
 
 # Setup Google Cloud SDK ######################################################
 if [ -d "$HOME/.gcloud/sdk" ]; then

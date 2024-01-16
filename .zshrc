@@ -1,7 +1,3 @@
-if type pkgx &> /dev/null; then
-  source <(pkgx --shellcode)
-fi
-
 HOMEBREW_PREFIX="$(brew --prefix)"
 
 if type asdf &> /dev/null; then

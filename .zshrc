@@ -105,3 +105,10 @@ fi
 if type starship &> /dev/null; then
   eval "$(starship init zsh)"
 fi
+
+# Setup LLVM 16 (to work with cifuzz) #########################################
+if [ -d /opt/homebrew/opt/llvm@16 ]; then
+  export PATH="/opt/homebrew/opt/llvm@16/bin:$PATH"
+  export LDFLAGS="-L/opt/homebrew/opt/llvm@16/lib"
+  export CPPFLAGS="-I/opt/homebrew/opt/llvm@16/include"
+fi

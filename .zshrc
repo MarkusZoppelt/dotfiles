@@ -45,11 +45,6 @@ HISTSIZE=9999999
 SAVEHIST=9999999
 bindkey '^R' history-incremental-pattern-search-backward
 
-# Setup Node with fnm #########################################################
-if type fnm &> /dev/null; then
-  eval "$(fnm env --use-on-cd)"
-fi
-
 # Setup fzf ###################################################################
 case $OSTYPE in
   linux*)

@@ -25,7 +25,6 @@ autoload -Uz compinit
 compinit -C
 zstyle ':completion:*' menu select=1
 setopt COMPLETE_ALIASES
-setopt share_history
 setopt autocd
 unsetopt BEEP
 
@@ -43,7 +42,15 @@ fi
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=9999999
 SAVEHIST=9999999
-bindkey '^R' history-incremental-pattern-search-backward
+setopt INC_APPEND_HISTORY   # immediately append the history file
+setopt EXTENDED_HISTORY     # record timestamp in history
+setopt HIST_IGNORE_DUPS     # don't record an entry that was just recorded again
+setopt HIST_IGNORE_ALL_DUPS # ignore all duplicate entries
+setopt HIST_FIND_NO_DUPS    # do not display a line previously found
+setopt HIST_IGNORE_SPACE    # ignore commands that start with space
+setopt HIST_SAVE_NO_DUPS    # don't write duplicate entries
+setopt SHARE_HISTORY        # share history between sessions
+bindkey '^R' history-incremental-pattern-search-backward # fzf fallback
 
 # Setup fzf ###################################################################
 case $OSTYPE in

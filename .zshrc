@@ -96,6 +96,11 @@ if type asdf &> /dev/null; then
     export DIRENV_LOG_FORMAT=""
     source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
   fi
+
+  if [ -f "$HOME/.asdf/plugins/golang/set-env.zsh" ]; then
+    . $HOME/.asdf/plugins/golang/set-env.zsh
+  fi
+
   jh() {
     if [ -e "$HOME/.asdf/plugins/java/set-java-home.zsh" ]; then
       . $HOME/.asdf/plugins/java/set-java-home.zsh

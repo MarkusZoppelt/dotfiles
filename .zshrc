@@ -88,6 +88,11 @@ case $OSTYPE in
   ;;
 esac
 
+# Setup Go ####################################################################
+export GOPATH="$HOME/code/go"
+export GOBIN="$GOPATH/bin"
+export PATH="$GOBIN:$PATH"
+
 # Setup asdf ##################################################################
 if type asdf &> /dev/null; then
   . $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
@@ -95,10 +100,6 @@ if type asdf &> /dev/null; then
   if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc" ]; then
     export DIRENV_LOG_FORMAT=""
     source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
-  fi
-
-  if [ -f "$HOME/.asdf/plugins/golang/set-env.zsh" ]; then
-    . $HOME/.asdf/plugins/golang/set-env.zsh
   fi
 
   jh() {

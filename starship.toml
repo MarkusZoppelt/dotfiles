@@ -1,12 +1,10 @@
+add_newline = false
+
 format = """
 $directory\
 $git_branch\
 $git_status\
-$nodejs\
-$rust\
-$golang\
-$python\
-\n$character"""
+$character"""
 
 [directory]
 style = "fg:#769ff0 bold"
@@ -18,19 +16,3 @@ format = 'on [[$branch](purple)]($style) '
 
 [git_status]
 format = '[[($all_status$ahead_behind )](fg:#769ff0)]($style)'
-
-[nodejs]
-symbol = "nodejs"
-format = '[[ $symbol ($version) ](fg:bright-black)]($style)'
-
-[rust]
-symbol = "rs"
-format = '[[ $symbol ($version) ](fg:bright-black)]($style)'
-
-[golang]
-symbol = "go"
-format = '[[ $symbol ($version) ](fg:bright-black)]($style)'
-
-[python]
-symbol = "py"
-format = '[[ $symbol ($version) ](fg:bright-black)$virtualenv]($style)'

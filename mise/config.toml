@@ -1,0 +1,7 @@
+[tools]
+go = "latest"
+node = "lts"
+maven = "latest"
+gradle = "latest"
+java = "lts"
+kotlin = "latest"

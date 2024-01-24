@@ -93,20 +93,9 @@ export GOPATH="$HOME/code/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$GOBIN:$PATH"
 
-# Setup asdf ##################################################################
-if type asdf &> /dev/null; then
-  . $HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh
-  # use asdf-direnv if available for faster loading
-  if [ -f "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc" ]; then
-    export DIRENV_LOG_FORMAT=""
-    source "${XDG_CONFIG_HOME:-$HOME/.config}/asdf-direnv/zshrc"
-  fi
-
-  jh() {
-    if [ -e "$HOME/.asdf/plugins/java/set-java-home.zsh" ]; then
-      . $HOME/.asdf/plugins/java/set-java-home.zsh
-    fi
-  }
+# Setup mise ##################################################################
+if type mise &> /dev/null; then
+  eval "$(mise activate zsh)"
 fi
 
 # Setup Google Cloud SDK ######################################################

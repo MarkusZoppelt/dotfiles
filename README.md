@@ -10,8 +10,6 @@ Install everything with `brew`:
 
 Create symlinks:
 
-    ln -nsf ~/.dotfiles/.asdfrc ~/.asdfrc
-    ln -nsf ~/.dotfiles/.envrc ~/.envrc
     ln -nsf ~/.dotfiles/.gitconfig ~/.gitconfig
     ln -nsf ~/.dotfiles/.gitignore_global ~/.gitignore_global
     ln -nsf ~/.dotfiles/.profile ~/.profile
@@ -22,6 +20,7 @@ Create symlinks:
     ln -nsf ~/.dotfiles/alacritty ~/.config/alacritty
     ln -nsf ~/.dotfiles/gh-copilot ~/.config/gh-copilot
     ln -nsf ~/.dotfiles/lsd ~/.config/lsd
+    ln -nsf ~/.dotfiles/mise ~/.config/mise
     ln -nsf ~/.dotfiles/nvim ~/.config/nvim
     ln -nsf ~/.dotfiles/starship.toml ~/.config/starship.toml
     ln -nsf ~/.dotfiles/wezterm ~/.config/wezterm

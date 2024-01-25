@@ -30,10 +30,6 @@ unsetopt BEEP
 
 bindkey -s ^f "tmux-sessionizer\n"
 
-if [ -d "$HOME/go/bin" ]; then
-	export PATH="$PATH:$HOME/go/bin"
-fi
-
 if [ -d "$HOME/.local/bin" ]; then
 	export PATH="$PATH:$HOME/.local/bin"
 fi

@@ -1,7 +1,8 @@
 [tools]
 go = "latest"
 node = "lts"
-maven = "latest"
-gradle = "latest"
-java = "lts"
-kotlin = "latest"
+
+[settings]
+go_set_gopath = false
+go_set_gobin = false
+go_set_goroot = false

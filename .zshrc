@@ -1,4 +1,6 @@
-HOMEBREW_PREFIX="$(brew --prefix)"
+if type brew &> /dev/null; then
+    HOMEBREW_PREFIX="$(brew --prefix)"
+fi
 
 # Setup aliases ###############################################################
 alias g='git status'
@@ -79,6 +81,9 @@ fpath=($HOME/.local/share/zsh/completions $fpath)
 
 # Setup YubiKey Agent #########################################################
 case $OSTYPE in
+  linux*)
+    export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/yubikey-agent/yubikey-agent.sock"
+  ;;
   darwin*)
     export SSH_AUTH_SOCK="$HOMEBREW_PREFIX/var/run/yubikey-agent.sock"
   ;;

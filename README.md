@@ -3,7 +3,7 @@
     git clone https://github.com/MarkusZoppelt/dotfiles.git ~/.dotfiles
 
 
-Install everything with `brew`:
+Install everything with `brew` (only macOS)
 
     brew bundle --file ~/.dotfiles/Brewfile
 
@@ -14,7 +14,7 @@ Create symlinks:
     ln -nsf ~/.dotfiles/.gitignore_global ~/.gitignore_global
     ln -nsf ~/.dotfiles/.profile ~/.profile
     ln -nsf ~/.dotfiles/.tmux.conf ~/.tmux.conf
-    ln -nsf ~/.dotfiles/.zprofile ~/.zprofile
+    ln -nsf ~/.dotfiles/.zprofile ~/.zprofile # only on macOS
     ln -nsf ~/.dotfiles/.zshenv ~/.zshenv
     ln -nsf ~/.dotfiles/.zshrc ~/.zshrc
     ln -nsf ~/.dotfiles/alacritty ~/.config/alacritty

@@ -7,3 +7,6 @@ vim.keymap.set('x', '<leader>p"', '"_dP')
 -- Set leader y to copy to system clipboard
 vim.keymap.set('n', '<leader>y', '"+y')
 vim.keymap.set('v', '<leader>y', '"+y')
+
+-- tmux sessionizer
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")

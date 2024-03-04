@@ -30,6 +30,7 @@ setopt COMPLETE_ALIASES
 setopt autocd
 unsetopt BEEP
 
+bindkey -s ^a "tmux a\n"
 bindkey -s ^f "tmux-sessionizer\n"
 
 if [ -d "$HOME/.local/bin" ]; then

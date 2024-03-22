@@ -24,3 +24,8 @@ Create symlinks:
     ln -nsf ~/.dotfiles/nvim ~/.config/nvim
     ln -nsf ~/.dotfiles/starship.toml ~/.config/starship.toml
     ln -nsf ~/.dotfiles/wezterm ~/.config/wezterm
+
+Link my tools:
+
+    mkdir -p ~/.local/bin
+    ln -nsf ~/.dotfiles/bin/* ~/.local/bin

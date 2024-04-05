@@ -52,22 +52,9 @@ setopt SHARE_HISTORY        # share history between sessions
 bindkey '^R' history-incremental-pattern-search-backward # fzf fallback
 
 # Setup fzf ###################################################################
-case $OSTYPE in
-  linux*)
-	if [[ ! "$PATH" == *$HOME/.fzf/bin* ]]; then
-		PATH="${PATH:+${PATH}:}$HOME/.fzf/bin"
-	fi
-	[[ $- == *i* ]] && source "$HOME/.fzf/shell/completion.zsh" 2>/dev/null
-	source "$HOME/.fzf/shell/key-bindings.zsh"
-  ;;
-  darwin*)
-	if [[ ! "$PATH" == *$HOMEBREW_PREFIX/opt/fzf/bin* ]]; then
-		PATH="${PATH:+${PATH}:}$HOMEBREW_PREFIX/opt/fzf/bin"
-	fi
-	[[ $- == *i* ]] && source "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh" 2>/dev/null
-	source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
-  ;;
-esac
+if type fzf &> /dev/null; then
+    eval "$(fzf --zsh)"
+fi
 
 # Setup completions & autosuggestions #########################################
 case $OSTYPE in

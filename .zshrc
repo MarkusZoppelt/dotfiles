@@ -54,6 +54,8 @@ bindkey '^R' history-incremental-pattern-search-backward # fzf fallback
 # Setup fzf ###################################################################
 if type fzf &> /dev/null; then
     eval "$(fzf --zsh)"
+else
+    [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 fi
 
 # Setup completions & autosuggestions #########################################

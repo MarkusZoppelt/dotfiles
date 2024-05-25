@@ -7,7 +7,7 @@ alias g='git status'
 alias ga='git add .'
 alias gc='git commit'
 alias gp='git push'
-alias ls='ls -F --color=auto'
+alias ls='ls -F --color=always'
 alias ll='ls -l'
 
 if type nvim &> /dev/null; then

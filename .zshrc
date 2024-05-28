@@ -77,12 +77,6 @@ if type mise &> /dev/null; then
   eval "$(mise activate zsh)"
 fi
 
-# Setup Google Cloud SDK ######################################################
-if [ -d "$HOME/.gcloud/sdk" ]; then
-    . "$HOME/.gcloud/sdk/path.zsh.inc"
-    . "$HOME/.gcloud/sdk/completion.zsh.inc"
-fi
-
 if type starship &> /dev/null; then
   eval "$(starship init zsh)"
 fi

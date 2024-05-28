@@ -9,14 +9,11 @@ alias gc='git commit'
 alias gp='git push'
 alias ls='ls -F --color=always'
 alias ll='ls -l'
+alias lg=lazygit
 
 if type nvim &> /dev/null; then
   alias vim=nvim
   export EDITOR='nvim'
-fi
-
-if type lazygit &> /dev/null; then
-  alias lg=lazygit
 fi
 
 # General settings ############################################################
@@ -30,9 +27,7 @@ unsetopt BEEP
 bindkey -s ^a "tmux a\n"
 bindkey -s ^f "tmux-sessionizer\n"
 
-if [ -d "$HOME/.local/bin" ]; then
-	export PATH="$PATH:$HOME/.local/bin"
-fi
+[ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
 
 # History #####################################################################
 HISTFILE=$HOME/.zsh_history
@@ -56,14 +51,10 @@ else
 fi
 
 # Setup completions & autosuggestions #########################################
-case $OSTYPE in
-  linux*)
-    source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  ;;
-  darwin*)
-    source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-  ;;
-esac
+[ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && \
+  source /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+[ -f $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && \
+  source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 fpath=($HOME/.local/share/zsh/completions $fpath)
 
 # Setup YubiKey Agent #########################################################

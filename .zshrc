@@ -72,11 +72,6 @@ export GOPATH="$HOME/code/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$GOBIN:$PATH"
 
-# Setup mise ##################################################################
-if type mise &> /dev/null; then
-  eval "$(mise activate zsh)"
-fi
-
 if type starship &> /dev/null; then
   eval "$(starship init zsh)"
 fi

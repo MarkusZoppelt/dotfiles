@@ -9,7 +9,6 @@ return {
         local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
         require('mason-lspconfig').setup({
             ensure_installed = {
-                'clangd',
                 'tsserver',
                 'gopls',
                 'rust_analyzer',
@@ -22,5 +21,10 @@ return {
                 })
             end,
         })
+
+        -- Manually setup clangd to ensure it uses the version from PATH
+        require 'lspconfig'.clangd.setup {
+            capabilities = lsp_capabilities,
+        }
     end
 }

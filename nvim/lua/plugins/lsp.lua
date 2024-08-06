@@ -1,5 +1,8 @@
 return {
     "neovim/nvim-lspconfig",
+    opts = {
+        servers = { clangd = { mason = false } } -- disable mason for clangd
+    },
     config = function()
         vim.api.nvim_create_autocmd('LspAttach', {
             desc = 'LSP actions',

@@ -1,3 +1,0 @@
-[submodule "nix"]
-	path = nix
-	url = https://github.com/MarkusZoppelt/nix

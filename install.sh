@@ -8,12 +8,12 @@ ln -nsf ~/.dotfiles/.tmux.conf ~/.tmux.conf
 #ln -nsf ~/.dotfiles/.zshenv ~/.zshenv
 ln -nsf ~/.dotfiles/.zshrc ~/.zshrc
 mkdir -p ~/.config
-ln -nsf ~/.dotfiles/alacritty ~/.config/alacritty
-ln -nsf ~/.dotfiles/gh-copilot ~/.config/gh-copilot
-ln -nsf ~/.dotfiles/hypr ~/.config/hypr
-ln -nsf ~/.dotfiles/nvim ~/.config/nvim
-ln -nsf ~/.dotfiles/starship.toml ~/.config/starship.toml
-ln -nsf ~/.dotfiles/wezterm ~/.config/wezterm
+ln -nsf ~/.dotfiles/config/alacritty ~/.config/alacritty
+ln -nsf ~/.dotfiles/config/gh-copilot ~/.config/gh-copilot
+ln -nsf ~/.dotfiles/config/hypr ~/.config/hypr
+ln -nsf ~/.dotfiles/config/nvim ~/.config/nvim
+ln -nsf ~/.dotfiles/config/starship.toml ~/.config/starship.toml
+ln -nsf ~/.dotfiles/config/wezterm ~/.config/wezterm
 
 if [ "$(uname)" == "Darwin" ]; then
     brew bundle --file ~/.dotfiles/Brewfile

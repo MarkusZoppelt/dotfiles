@@ -42,5 +42,9 @@ action = "CreateNewWindow"
 key = "N"
 mods = "Shift|Control"
 
+[[keyboard.bindings]]
+action = "ToggleFullScreen"
+key = "F11"
+
 [window]
 opacity = 1

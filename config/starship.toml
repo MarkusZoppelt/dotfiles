@@ -1,6 +1,7 @@
 add_newline = false
 
 format = """
+$hostname\
 $directory\
 $git_branch\
 $git_status\
@@ -16,3 +17,10 @@ format = 'on [[$branch](purple)]($style) '
 
 [git_status]
 format = '[[($all_status$ahead_behind )](fg:#769ff0)]($style)'
+
+[hostname]
+# ssh_symbol = "🔒"
+ssh_only = true
+# format = '[$ssh_symbol](bold blue) on [$hostname](bold red) '
+format = '[@$hostname](bold green) '
+disabled = false

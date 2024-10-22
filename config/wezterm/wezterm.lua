@@ -2,6 +2,8 @@ local wezterm = require 'wezterm'
 local config = {
     hide_tab_bar_if_only_one_tab = true,
     native_macos_fullscreen_mode = false,
+    front_end = "WebGpu",
+    max_fps = 144
 }
 
 config.color_scheme = 'Tokyo Night'

@@ -10,6 +10,7 @@ ln -nsf ~/.dotfiles/.zshrc ~/.zshrc
 mkdir -p ~/.config
 ln -nsf ~/.dotfiles/config/alacritty ~/.config/alacritty
 ln -nsf ~/.dotfiles/config/gh-copilot ~/.config/gh-copilot
+ln -nsf ~/.dotfiles/config/ghostty ~/.config/ghostty
 ln -nsf ~/.dotfiles/config/hypr ~/.config/hypr
 ln -nsf ~/.dotfiles/config/nvim ~/.config/nvim
 ln -nsf ~/.dotfiles/config/starship.toml ~/.config/starship.toml

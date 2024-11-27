@@ -12,6 +12,6 @@
 [push]
 	default = current
 [pull]
-	rebase = false
+	rebase = true
 [gpg]
 	format = ssh

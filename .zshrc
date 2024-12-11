@@ -29,6 +29,9 @@ bindkey -s ^f "tmux-sessionizer\n"
 
 [ -d "$HOME/.local/bin" ] && export PATH="$PATH:$HOME/.local/bin"
 
+[ -d "$HOME/.npm/bin" ] && export PATH="$PATH:$HOME/.npm/bin" && \
+  export NPM_CONFIG_PREFIX="$HOME/.npm"
+
 # History #####################################################################
 HISTFILE=$HOME/.zsh_history
 HISTSIZE=9999999

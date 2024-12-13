@@ -5,20 +5,8 @@ font-family-bold-italic = Monaspace Neon Bold Italic
 
 theme = TokyoNight
 
-# Enable this once tabs are supprted in this mode
-# macos-non-native-fullscreen = true
-
 macos-auto-secure-input = true
 
-# Quick terminal
-keybind = global:cmd+escape=toggle_quick_terminal
-quick-terminal-animation-duration = 0
+mouse-hide-while-typing = true
 
 scrollback-limit = 1000000000
-
-copy-on-select = clipboard
-
-background-opacity = 0.95
-background-blur-radius = 20
-macos-non-native-fullscreen = visible-menu
-mouse-hide-while-typing = true

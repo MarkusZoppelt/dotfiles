@@ -3,7 +3,7 @@ font-family-bold = Monaspace Neon Bold
 font-family-italic = Monaspace Neon Italic
 font-family-bold-italic = Monaspace Neon Bold Italic
 
-theme = TokyoNight
+theme = tokyonight
 
 macos-auto-secure-input = true
 

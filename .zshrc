@@ -17,6 +17,8 @@ if type nvim &> /dev/null; then
 fi
 
 # General settings ############################################################
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
 autoload -Uz compinit
 compinit -C
 zstyle ':completion:*' menu select=1

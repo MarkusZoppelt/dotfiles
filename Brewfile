@@ -17,6 +17,7 @@ brew "jq"
 brew "lazygit"
 brew "mas"
 brew "neovim"
+brew "node"
 brew "ollama", restart_service: true
 brew "openssh"
 brew "qrencode"

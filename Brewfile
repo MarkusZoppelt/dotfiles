@@ -37,6 +37,5 @@ brew "zsh-completions"
 cask "font-monaspace"
 cask "signal"
 cask "spotify"
-cask "wezterm"
 
 mas "Tailscale", id: 1475387142

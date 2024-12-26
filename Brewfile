@@ -36,6 +36,7 @@ brew "zsh-autosuggestions"
 brew "zsh-completions"
 
 cask "font-monaspace"
+cask "ghostty"
 cask "signal"
 cask "spotify"
 

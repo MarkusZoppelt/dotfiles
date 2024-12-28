@@ -1,12 +1,2 @@
 font-family = Monaspace Neon
-font-family-bold = Monaspace Neon Bold
-font-family-italic = Monaspace Neon Italic
-font-family-bold-italic = Monaspace Neon Bold Italic
-
 theme = tokyonight
-
-macos-auto-secure-input = true
-
-mouse-hide-while-typing = true
-
-scrollback-limit = 1000000000

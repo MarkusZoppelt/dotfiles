@@ -1,0 +1,5 @@
+ chromium-browser
+ chromium-codecs-ffmpeg
+ libnvidia-egl-wayland1
+ mesa-vulkan-drivers
+ nvidia-vaapi-driver

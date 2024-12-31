@@ -21,24 +21,26 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 if [ "$(uname)" == "Linux" ]; then
+    ln -nsf ~/.dotfiles/config/hypr ~/.config/hypr
+
+    # Install apt packages
     if [ -x "$(command -v apt)" ]; then
         sudo apt update
-        sudo apt install -y \
-            age \
-            btop \
-            direnv \
-            fd-find \
-            fzf \
-            gh \
-            git \
-            htop \
-            jq \
-            neovim \
-            ripgrep \
-            tmux \
-            zsh
+        sudo apt install -y $(cat ~/.dotfiles/pkglist)
+        # sudo apt install -y $(cat ~/.dotfiles/pkglist-nvidia)
     fi
-    ln -nsf ~/.dotfiles/config/hypr ~/.config/hypr
+
+    if [ ! -x "$(command -v rustup)" ]; then
+        curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+    fi
+
+    if [ ! -x "$(command -v starship)" ]; then
+        curl -sS https://starship.rs/install.sh | sh
+    fi
+
+    if [ ! -x "$(command -v tailscale)" ]; then
+        curl -fsSL https://tailscale.com/install.sh | sh
+    fi
 fi
 
 # Installing tools

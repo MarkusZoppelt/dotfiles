@@ -20,26 +20,6 @@ if [ "$(uname)" == "Darwin" ]; then
     ln -nsf ~/.dotfiles/.zprofile ~/.zprofile
 fi
 
-if [ "$(uname)" == "Linux" ]; then
-    if [ -x "$(command -v apt)" ]; then
-        sudo apt update
-        sudo apt install -y \
-            age \
-            btop \
-            direnv \
-            fd-find \
-            fzf \
-            gh \
-            git \
-            htop \
-            jq \
-            neovim \
-            ripgrep \
-            tmux \
-            zsh
-    fi
-fi
-
 # Installing tools
 mkdir -p ~/.local/bin
 ln -nsf ~/.dotfiles/bin/* ~/.local/bin

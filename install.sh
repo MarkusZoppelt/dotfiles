@@ -38,7 +38,6 @@ if [ "$(uname)" == "Linux" ]; then
             tmux \
             zsh
     fi
-    ln -nsf ~/.dotfiles/config/hypr ~/.config/hypr
 fi
 
 # Installing tools

@@ -2,6 +2,19 @@
 	name = Markus Zoppelt
 	email = markus@zoppelt.net
 	signingkey = /Users/mz/.ssh/yubikey-agent.pub
+[column]
+    ui = auto
+[branch]
+    sort = -committerdate
+[tag]
+    sort = version:refname
+[init]
+    defaultBranch = main
+[diff]
+    algorithm = histogram
+    colorMoved = plain
+    mnemonicPrefix = true
+    renames = true
 [filter "media"]
 	clean = git-media-clean %f
 	smudge = git-media-smudge %f
@@ -10,7 +23,13 @@
 	editor = nvim
 	quotepath = false
 [push]
-	default = current
+    default = simple
+    autoSetupRemote = true
+    followTags = true
+[fetch]
+    prune = true
+    pruneTags = true
+    all = true
 [pull]
 	rebase = true
 [gpg]

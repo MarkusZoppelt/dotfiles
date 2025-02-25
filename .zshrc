@@ -11,6 +11,10 @@ alias ls='ls -F --color=always'
 alias ll='ls -l'
 alias lg=lazygit
 
+if type fdfind &> /dev/null; then # on Ubuntu, fd is called fdfind
+  alias fd=fdfind
+fi
+
 if type nvim &> /dev/null; then
   alias vim=nvim
   export EDITOR='nvim'

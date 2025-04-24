@@ -1,16 +1,7 @@
-# Environment Setup ###########################################################
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
+# History settings
 export HISTFILE=$HOME/.zsh_history
 export HISTSIZE=9999999
 export SAVEHIST=9999999
-
-[ -d "$HOME/.local/bin" ] && export PATH="$HOME/.local/bin:$PATH"
-export GOPATH="$HOME/code/go"
-export GOBIN="$GOPATH/bin"
-export PATH="$GOBIN:$PATH"
-export NPM_CONFIG_PREFIX="$HOME/.npm"
-export PATH="$HOME/.npm/bin:$PATH"
 
 [ -n "$(command -v brew)" ] && HOMEBREW_PREFIX="$(brew --prefix)"
 [ -n "$(command -v nvim)" ] && { alias vim=nvim; export EDITOR=nvim; }

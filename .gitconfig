@@ -1,7 +1,7 @@
 [user]
 	name = Markus Zoppelt
 	email = markus@zoppelt.net
-	signingkey = /Users/mz/.ssh/yubikey-agent.pub
+	signingkey = ~/.ssh/yubikey-agent.pub
 [column]
     ui = auto
 [branch]

@@ -10,7 +10,6 @@ brew "gnu-getopt"
 brew "go"
 brew "jq"
 brew "lazygit"
-brew "mas"
 brew "neovim"
 brew "node"
 brew "ollama", restart_service: true
@@ -34,5 +33,4 @@ cask "font-monaspace"
 cask "ghostty"
 cask "signal"
 cask "spotify"
-
-mas "Tailscale", id: 1475387142
+cask "tailscale"

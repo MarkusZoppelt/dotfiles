@@ -1,6 +1,6 @@
 # Dotfiles
 
-A modular, minimal setup with zsh, tmux, [neovim](https://neovim.io), [starship](https://starship.rs), and essential tooling.
+A modular, minimal setup with zsh, tmux, [neovim](https://neovim.io), and essential tooling for a productive development environment.
 
 ## Prerequisites
 

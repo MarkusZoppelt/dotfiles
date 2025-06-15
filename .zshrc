@@ -59,8 +59,17 @@ case $OSTYPE in
   ;;
 esac
 
+# Prompt Setup ################################################################
+autoload -Uz vcs_info
+precmd() { vcs_info }
+zstyle ':vcs_info:git:*' formats ' on %F{magenta}%b%f%F{blue}%u%c%f'
+zstyle ':vcs_info:*' check-for-changes true
+zstyle ':vcs_info:*' unstagedstr '*'
+zstyle ':vcs_info:*' stagedstr '+'
+setopt PROMPT_SUBST
+PROMPT='${SSH_CONNECTION:+"%F{green}@%m%f "}%F{blue}%B%3~%b%f${vcs_info_msg_0_} %(?.%F{green}.%F{red})❯%f '
+
 # External Tools Initialization ###############################################
-[ -n "$(command -v starship)" ] && eval "$(starship init zsh)"
 [ -n "$(command -v fzf)" ] && eval "$(fzf --zsh)"
 [ -n "$(command -v direnv)" ] && eval "$(direnv hook zsh)"
 [ -f ~/.config/op/plugins.sh ] && source ~/.config/op/plugins.sh

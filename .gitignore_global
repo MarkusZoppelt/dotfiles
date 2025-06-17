@@ -24,3 +24,6 @@ Icon
 
 #Redis
 dump.rdb
+
+# OpenCode
+.opencode/

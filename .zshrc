@@ -64,5 +64,4 @@ esac
 [ -n "$(command -v fzf)" ] && eval "$(fzf --zsh)"
 [ -n "$(command -v direnv)" ] && eval "$(direnv hook zsh)"
 [ -f ~/.config/op/plugins.sh ] && source ~/.config/op/plugins.sh
-
-
+[ -d ~/.opencode/bin ] && export PATH=~/.opencode/bin:$PATH

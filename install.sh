@@ -19,6 +19,11 @@ if [ "$(uname)" == "Darwin" ]; then
     ln -nsf ~/.dotfiles/.zprofile ~/.zprofile
 fi
 
+if [ "$(uname)" == "Linux" ]; then
+    ln -nsf ~/.dotfiles/config/hypr      ~/.config/hypr
+    ln -nsf ~/.dotfiles/config/waybar    ~/.config/waybar
+fi
+
 # Installing tools
 mkdir -p ~/.local/bin
 ln -nsf ~/.dotfiles/bin/* ~/.local/bin

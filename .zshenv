@@ -5,7 +5,7 @@ export LANG=en_US.UTF-8
 export LC_ALL=en_US.UTF-8
 
 # Rust toolchain
-if [ -d "$HOME/.cargo" ]; then
+if [ -f "$HOME/.cargo/env" ]; then
   source "$HOME/.cargo/env"
 fi
 

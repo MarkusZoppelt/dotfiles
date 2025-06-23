@@ -27,3 +27,5 @@ dump.rdb
 
 # OpenCode
 .opencode/
+
+.direnv

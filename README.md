@@ -1,12 +1,14 @@
 # Dotfiles
 
-A modular, minimal setup with zsh, tmux, [neovim](https://neovim.io), and essential tooling for a productive development environment.
+A modular, minimal setup with zsh, tmux, [neovim](https://neovim.io), Hyprland, and essential tooling for a productive development environment.
 
 ## Features
 
 - **Shell**: Zsh with autosuggestions, history management, custom aliases, and visual prompt feedback
 - **Terminal Multiplexer**: Tmux with custom key bindings and theming
 - **Editor**: Neovim with Lazy.nvim plugin manager and LSP support
+- **Window Manager**: Hyprland (Wayland compositor) with custom keybindings and theming
+- **Status Bar**: Waybar with system monitoring and workspace indicators
 - **Version Control**: Git with sensible defaults and aliases
 - **Security**: YubiKey agent integration for SSH authentication
 - **Smart Integration**: Conditional loading of tools (1Password CLI, fzf, direnv) based on availability
@@ -35,6 +37,8 @@ The installer will:
 - **Zsh**: Edit `.zshrc` for shell customization
 - **Tmux**: Modify `.tmux.conf` for terminal multiplexer settings
 - **Neovim**: Configure plugins in `config/nvim/lua/plugins/`
+- **Hyprland**: Adjust window manager settings in `config/hypr/hyprland.conf`
+- **Waybar**: Customize status bar in `config/waybar/config.jsonc` and `config/waybar/style.css`
 - **Git**: Adjust settings in `.gitconfig`
 
 ## Included Tools
@@ -44,6 +48,7 @@ The Brewfile includes essential development tools:
 - **CLI Tools**: fd, fzf, ripgrep, jq, btop
 - **Development**: lazygit, gh (GitHub CLI), direnv
 - **Security**: age, yubikey-agent
+- **Wayland/Linux**: Hyprland, Waybar (for Linux desktop environments)
 - **Applications**: Ghostty terminal, Signal, Spotify
 
 ## System Provisioning

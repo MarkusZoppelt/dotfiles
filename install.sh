@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 echo "Creating symlinks"
 ln -nsf ~/.dotfiles/.gitconfig           ~/.gitconfig

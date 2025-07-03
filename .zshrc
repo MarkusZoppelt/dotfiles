@@ -5,6 +5,7 @@ export SAVEHIST=9999999
 
 [ -n "$(command -v brew)" ] && HOMEBREW_PREFIX="$(brew --prefix)"
 [ -n "$(command -v nvim)" ] && { alias vim=nvim; export EDITOR=nvim; }
+[ -n "$(command -v fdfind)" ] && alias fd=fdfind
 
 # Shell Options ###############################################################
 setopt autocd
@@ -31,14 +32,9 @@ bindkey -s ^a "tmux a\n"
 bindkey -s ^f "tmux-sessionizer\n"
 
 # Aliases #####################################################################
-alias g='git status'
-alias ga='git add .'
-alias gc='git commit'
-alias gp='git push'
 alias ls='ls -F --color=always'
 alias ll='ls -l'
 alias lg=lazygit
-[ -n "$(command -v fdfind)" ] && alias fd=fdfind
 [ -d /Applications/Tailscale.app ] && \
     alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 

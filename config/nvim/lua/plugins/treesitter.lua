@@ -1,11 +1,12 @@
 return {
     {
         "nvim-treesitter/nvim-treesitter",
+        lazy = false,
         build = ":TSUpdate",
         config = function()
             require 'nvim-treesitter.configs'.setup {
                 -- A list of parser names, or "all"
-                ensure_installed = { "c", "go", "python", "rust" },
+                ensure_installed = { "go", "rust" },
 
                 -- Install parsers synchronously (only applied to `ensure_installed`)
                 sync_install = false,
@@ -14,7 +15,6 @@ return {
                 auto_install = true,
 
                 highlight = {
-                    -- `false` will disable the whole extension
                     enable = true,
                     additional_vim_regex_highlighting = false,
                 },
@@ -24,7 +24,7 @@ return {
     {
         "nvim-treesitter/nvim-treesitter-context",
         config = function()
-            require("treesitter-context").setup {
+            require 'treesitter-context'.setup {
                 enable = true
             }
         end

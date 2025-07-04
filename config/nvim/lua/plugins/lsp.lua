@@ -30,6 +30,30 @@ return {
             border = "rounded",
         })
 
+        -- Manually setup clangd to ensure it uses the version from PATH
+        local lsp_capabilities = require 'cmp_nvim_lsp'.default_capabilities()
+        vim.lsp.config('clangd', {
+            capabilities = lsp_capabilities,
+        })
+
+        vim.lsp.config('rust_analyzer', {
+            -- Server-specific settings. See `:help lsp-quickstart`
+            settings = {
+                ['rust-analyzer'] = {
+                    -- disable the default inlay hints
+                    inlayHints = {
+                        chainingHints = false,
+                        closureReturnTypeHints = false,
+                        lifetimeElisionHints = {
+                            enable = false,
+                        },
+                        parameterHints = false,
+                        typeHints = false,
+                    },
+                },
+            },
+        })
+
         vim.diagnostic.config({
             virtual_text = true
         })

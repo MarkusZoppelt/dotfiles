@@ -56,11 +56,7 @@
   },
   "custom/lock": {
     "tooltip": false,
-    "on-click": "sh -c '(sleep 0.5s; hyprlock)' & disown",
-    "format": "󰍁"
-  },
-    "later": {
-        "format": "<span class='icon'>{icon}</span> <span class='text'>{text}</span>"
-    }
-
+    "on-click": "~/.local/bin/power-menu",
+    "format": "󰐥"
+  }
 }

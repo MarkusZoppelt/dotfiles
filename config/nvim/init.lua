@@ -28,3 +28,12 @@ vim.opt.winborder = "rounded"
 
 require("lazy").setup("plugins")
 require('remaps')
+
+-- transparent background
+-- set this after loading theme
+vim.cmd [[
+highlight Normal guibg=none
+highlight NonText guibg=none
+highlight Normal ctermbg=none
+highlight NonText ctermbg=none
+]]

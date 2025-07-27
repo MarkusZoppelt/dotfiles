@@ -24,6 +24,7 @@ vim.opt.linebreak = true
 vim.opt.completeopt = "menu,menuone,noselect"
 vim.opt.visualbell = false
 vim.opt.hlsearch = false
+vim.opt.winborder = "rounded"
 
 require("lazy").setup("plugins")
 require('remaps')

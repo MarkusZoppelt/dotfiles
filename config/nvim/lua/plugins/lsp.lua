@@ -26,10 +26,6 @@ return {
             end
         })
 
-        vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-            border = "rounded",
-        })
-
         -- Manually setup clangd to ensure it uses the version from PATH
         local lsp_capabilities = require 'cmp_nvim_lsp'.default_capabilities()
         vim.lsp.config('clangd', {

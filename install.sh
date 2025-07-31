@@ -22,8 +22,8 @@ fi
 if command -v hyprland >/dev/null 2>&1; then
     ln -nsf ~/.dotfiles/config/hypr      ~/.config/hypr
     ln -nsf ~/.dotfiles/config/mako      ~/.config/mako
+    ln -nsf ~/.dotfiles/config/walker    ~/.config/walker
     ln -nsf ~/.dotfiles/config/waybar    ~/.config/waybar
-    ln -nsf ~/.dotfiles/config/wofi      ~/.config/wofi
 fi
 
 # Installing tools

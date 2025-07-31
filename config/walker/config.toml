@@ -1,0 +1,9 @@
+theme = "tokyonight"
+
+[activation_mode]
+labels = ""
+
+[builtins.applications]
+weight = 5
+name = "applications"
+placeholder = "Applications"

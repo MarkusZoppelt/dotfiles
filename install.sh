@@ -16,7 +16,8 @@ ln -nsf ~/.dotfiles/config/nvim          ~/.config/nvim
 
 if [ "$(uname)" == "Darwin" ]; then
     brew bundle --file ~/.dotfiles/Brewfile
-    ln -nsf ~/.dotfiles/.zprofile ~/.zprofile
+    ln -nsf ~/.dotfiles/.zprofile        ~/.zprofile
+    ln -nsf ~/.dotfiles/config/ghostty   ~/Library/Application\ Support/com.mitchellh.ghostty
 fi
 
 if command -v hyprland >/dev/null 2>&1; then

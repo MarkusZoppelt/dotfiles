@@ -52,7 +52,7 @@
     "format-icons": {
       "default": ["󰕿", "󰖀", "󰕾"]
     },
-    "on-click": "pavucontrol"
+    "on-click": "ghostty --command=wiremix"
   },
   "custom/lock": {
     "tooltip": false,

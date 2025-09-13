@@ -35,8 +35,6 @@ bindkey -s ^f "tmux-sessionizer\n"
 alias ls='ls -F --color=always'
 alias ll='ls -l'
 alias lg=lazygit
-[ -d /Applications/Tailscale.app ] && \
-    alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 
 # Setup autosuggestions #######################################################
 [ -f /usr/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && \
@@ -44,16 +42,6 @@ alias lg=lazygit
 [ -n "$HOMEBREW_PREFIX" ] && \
   [ -f $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh ] && \
     source $HOMEBREW_PREFIX/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-
-# Setup YubiKey Agent #########################################################
-case $OSTYPE in
-  linux*)
-    export SSH_AUTH_SOCK="${XDG_RUNTIME_DIR}/yubikey-agent/yubikey-agent.sock"
-  ;;
-  darwin*)
-    export SSH_AUTH_SOCK="$HOMEBREW_PREFIX/var/run/yubikey-agent.sock"
-  ;;
-esac
 
 # Prompt Setup ################################################################
 autoload -Uz vcs_info
@@ -68,5 +56,3 @@ PROMPT='${SSH_CONNECTION:+"%F{green}@%m%f "}%F{blue}%B%3~%b%f${vcs_info_msg_0_} 
 # External Tools Initialization ###############################################
 [ -n "$(command -v fzf)" ] && eval "$(fzf --zsh)"
 [ -n "$(command -v direnv)" ] && eval "$(direnv hook zsh)"
-[ -f ~/.config/op/plugins.sh ] && source ~/.config/op/plugins.sh || :
-[ -d ~/.opencode/bin ] && export PATH=~/.opencode/bin:$PATH || :
